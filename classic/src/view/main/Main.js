@@ -69,7 +69,7 @@ Ext.define('iplinfo.view.main.Main', {
                 tall: {
                     iconAlign: 'top',
                     textAlign: 'center',
-                    width: 120
+                    width: 121
                 }
             }
         }
