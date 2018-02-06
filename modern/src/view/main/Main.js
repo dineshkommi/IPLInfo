@@ -27,11 +27,11 @@ Ext.define('iplinfo.view.main.Main', {
         styleHtmlContent: true
     },
 
-    tabBarPosition: 'bottom',
+    // tabBarPosition: 'bottom',
 
     items: [
         {
-            title: 'Home',
+            title: 'Home ',
             iconCls: 'x-fa fa-home',
             layout: 'fit',
             // The following grid shares a store with the classic version's grid as well!
