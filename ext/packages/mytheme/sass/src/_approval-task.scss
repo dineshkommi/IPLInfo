@@ -1,0 +1,260 @@
+//FATHOM-1088
+.approve-buttons {
+  .btn-blue {
+    background: $color-blue-8 !important;
+    font-family: SourceSansPro-SemiBold!important;
+      &.x-btn-disabled {
+        background-color: rgba(5,22,38,0.20);
+      }
+    }
+  .btn-green {
+    background: $color-green-8!important;
+    font-family: SourceSansPro-SemiBold!important;
+      &.x-btn-over {
+        background: #057a57 !important;
+      }
+      &.x-btn-disabled {
+        background-color: rgba(5,22,38,0.20);
+      }
+      &.x-btn-focus {
+        background: #08684b;
+      }
+  }
+}
+
+//FATHOM 1070 - Task Subject Style
+.approval-task-subject .x-form-display-field {
+  font-family: SourceSansPro-Regular !important;
+  font-size: 18px !important;
+  color: #727d87 !important;
+}
+
+//FATHOM 1070 - Case Name Style
+.approval-case-name .x-form-display-field {
+  font-family: SourceSansPro-SemiBold !important;
+  font-size: 28px !important;
+  color: $color-black-8 !important;
+  letter-spacing: 0;
+  margin-top: -5px !important;
+  margin-left: -2px !important;
+}
+
+/*FATHOM-1072-Note Field*/
+
+.approval-task-gray-background {
+  width: 100vw;
+  height: 270px;
+  top: 38px !important;
+  position: absolute;
+  background: #ecf0f3;
+}
+
+.z-index-one {
+  z-index: 1 !important;
+}
+
+.gray-background {
+  background: #ecf0f3 !important;
+  height: 168px !important;
+}
+
+.approval-field-label {
+  .x-form-item-label {
+    font-size: 16px !important;
+    font-family: "SourceSansPro-Bold" !important;
+    font-weight: bolder !important;
+    color: #000;
+  }
+  .x-form-display-field {
+    font-family: SourceSansPro-Regular !important;
+    font-size: 16px !important;
+    font-weight: normal !important;
+  }
+}
+
+.xcpid_note.approval-field-label .x-form-display-field {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.xcpid_note .x-form-display-field {
+  padding-top: 8px;
+}
+
+.xcpid_bwcfc_ou_wf_approvesingle_approve .xcpid_cb_upper_section  {
+  margin-top: 55px !important;
+}
+
+.xcpid_bwcfc_ou_wf_approvesingle_approve .xcpid_cb_task_info {
+  margin-top: 0 !important;
+  margin-bottom: 15px !important;
+}
+
+//FATHOM 1076 - Priority Style
+.priority-label-normal {
+  @include priority-classification(4px,4px,4px,4px,#051626, #fff,0px,#fff);
+}
+.priority-label-urgent{
+  @include priority-classification(4px,4px,4px,4px,#fff,#F08C02,0px,#fff);
+}
+.priority-label-immediate{
+  @include priority-classification(4px,4px,4px,4px,#fff,#E03131,0px,#fff);
+}
+
+//FATHOM 1076 - Classification Style
+.classification-label-regular{
+  @include priority-classification(3px,4px,3px,4px,#051626,#fff,1px,#051626);  
+}
+.classification-label-restricted{
+  @include priority-classification(3px,4px,3px,4px,#051626,#fff,1px,#1B6EC2);  
+}
+.classification-label-confidential{
+  @include priority-classification(3px,4px,3px,4px,#051626,#fff,1px,#E03131);
+}
+.classification-label-sensitive{
+  @include priority-classification(3px,4px,3px,4px,#051626,#fff,1px,#059268);
+}
+
+.xcpid_cb_priority,
+.xcpid_cd_case_info {
+  left: 0 !important;
+}
+
+
+
+//FATHOM 1074 - Tab group 
+.approval-tab-group {
+  .x-tab-bar-body {
+    &.x-tab-bar-body-default .x-horizontal-box-overflow-body {
+      left: 3px;
+      font-family: SourceSansPro-Bold;
+      font-size: 22px;
+      letter-spacing: 0;
+    }
+    margin-left: 0px !important;
+  }
+  .x-tab:hover {
+    color: #051626;
+    border-bottom: 2px solid #059268;
+    border-width: 2px !important;
+  }
+  &.bwc-tab-large .x-box-target .x-tab:nth-child(2) {
+    margin: 0 10px !important;
+  }
+}
+
+//FATHOM 1074 - Tab group - Case Summary Tab
+.approval-tab-group {
+  &.bwc-tab-large .x-box-target .x-tab:nth-child(3) {
+    margin: 0 16px !important;
+  }
+}
+
+//FATHOM 1074 - Case Summary button next to incommings tab
+.approval-case-summary-btn {
+  z-index: 1;
+  left: 15.75% !important;
+  width: 167px;
+  top: 241px !important;
+  position: absolute;
+  &.x-btn-default-small {
+    background-color: transparent;
+    padding-left: 0px;
+    .x-btn-inner {
+      text-shadow: none;
+      font-family: SourceSansPro-Bold;
+      font-size: 22px;
+      font-weight: 600;
+      color: #1b6ec2;
+    }
+  }
+  .x-btn-button ::after {
+    color: #1b6ec2;
+    content: "\f08e";
+    padding-left: 149px !important;
+    font-size: 16px;
+    vertical-align: -webkit-baseline-middle !important;
+  }
+  &.fa-external-link::before, .x-btn-inner-center::after {
+    content: none;
+  }
+  &.x-btn-default-small-focus {
+    border-color: transparent !important;
+    border-width: 0px !important;
+    padding: unset !important;
+  }
+  &.x-btn-default-small {
+    padding: unset !important;
+  }
+  &.x-btn-default-small-over .x-btn-inner {
+    color: #051626;
+    border-bottom: 2px solid #059268;
+  }
+  .x-btn-button {
+    .x-btn-inner {
+      height: 28px;
+    }
+    height: 28px;
+  }
+  &.x-btn-default-small-over .x-btn-button ::after {
+    color: #051626;
+  }
+  .x-btn-inner {
+    margin-left: -24px !important;
+  }
+}
+
+
+
+//***********************************
+// FATHOM-1075 - Incomings tab
+//***********************************
+.xcpid_tab_incomings {
+  padding: 31px 0 0 0;
+  margin-left: 3px !important;
+  > .x-panel-body {
+    background-color: #fff;
+    padding: 0 16px 10px 13px !important;
+  }
+  .approve-incomings-dropdowns-coloumbox {
+    margin: 15px 0 0 0;
+    .x-form-invalid-under {
+      display: none;
+    }
+  }
+  .approve-incomings-dropdown {
+    margin-left: -1px !important;
+  }
+  .approve-incoming-docs-dropdown {
+    margin-left: 15px !important;
+  }
+}
+
+.approve-incoming-distribution-label .x-form-display-field {
+  font: 20px/1.2 "SourceSansPro-Bold" !important;
+  font-weight: 700 !important;
+  color: #000;
+  margin-left: 5px !important;
+}
+
+
+// Remove borders from distribution table
+.approval-incoming-distribution {
+  margin-top: 8px !important;
+  .x-panel-body-default {
+    border: none !important;
+  }
+}
+
+//***********************************
+// FATHOM-1075 - Case Summary tab
+//***********************************
+.xcpid_approve_case_summary_tab  {
+  padding: 31px 0 0 0;
+  margin-left: 3px !important;
+  > .x-panel-body {
+    background-color: #fff !important;
+  }
+}

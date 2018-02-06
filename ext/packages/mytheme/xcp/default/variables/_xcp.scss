@@ -1,0 +1,336 @@
+/**
+*  This file contains all the xcp variables that is modifiable by the theme editor
+*/
+
+// Changes the location of images when creating UIs to be relative instead of within the ExtJS directory.
+$relative-image-path-for-uis: "../themes/images";
+
+//define xcp theme name
+$theme-name: 'xcp-default';
+
+/** Default font **/
+$xcp-default-font-size: 12px !default;
+$xcp-default-font-family: Helvetica, Arial, sans-serif !default;
+
+/** widget selection color **/
+$xcp-widget-selection-color: #E1F0F7 !default;
+$xcp-widget-hover-color: #F0F7FB !default;
+
+//xcp variables:
+/** Widget Label Text **/
+$xcp-widget-label-text-font-family: $xcp-default-font-family !default;
+$xcp-widget-label-text-font-size: $xcp-default-font-size !default;
+$xcp-widget-label-text-font-weight: normal !default;
+$xcp-widget-label-text-font-color: #363636 !default;
+
+
+/** Widget Value Text **/
+$xcp-widget-value-text-font-family: $xcp-default-font-family !default;
+$xcp-widget-value-text-font-size: $xcp-default-font-size !default;
+$xcp-widget-value-text-font-weight: normal !default;
+$xcp-widget-value-text-font-color: #363636 !default;
+$xcp-widget-empty-color: #959595 !default;
+
+/** Widget Title Text **/
+$xcp-widget-title-text-font-family: $xcp-default-font-family !default;
+$xcp-widget-title-text-font-size: $xcp-default-font-size !default;
+$xcp-widget-title-text-font-weight: bold !default;
+$xcp-widget-title-text-font-color: #707070 !default;
+
+/** Widget Button Text **/
+$xcp-widget-button-text-font-family: $xcp-default-font-family !default;
+$xcp-widget-button-text-font-size: $xcp-default-font-size !default;
+$xcp-widget-button-text-font-weight: bold !default;
+$xcp-widget-button-text-font-color: #FFFFFF !default;
+$xcp-widget-button-text-font-color-over: #FFFFFF !default;
+$xcp-widget-button-text-font-color-focus: #FFFFFF !default;
+$xcp-widget-button-text-font-color-pressed: #FFFFFF !default;
+$xcp-widget-button-text-font-color-disabled: #FFFFFF !default;
+
+/** Link Text **/
+$xcp-link-text-normal-style:  none !default;
+$xcp-link-text-normal-color: #3399CC !default;
+$xcp-link-text-hover-style: none !default;
+$xcp-link-text-hover-color: #3399CC !default;
+
+$xcp-link-text-font-size: 13px !default;
+$xcp-link-text-font-weight: bold !default;
+$xcp-link-text-font-color: #3399CC !default;
+$xcp-link-text-font-family: $xcp-default-font-family !default;
+
+
+/** Widget Interior **/
+$xcp-widget-interior-background-color: #FFFFFF !default;
+$xcp-widget-field-padding: 2px 3px !default;
+$xcp-widget-field-background-image: 'form/text-bg-trans.png' !default;
+
+/** Widget Border **/
+$xcp-widget-border-color: #D7D7D7 !default;
+$xcp-widget-border-color-focus: #959595 !default;
+$xcp-widget-border-shadow: false !default;
+$xcp-widget-frame-border-radius: 0px !default;
+$xcp-widget-field-background-color-focus: #E1F0F7 !default;
+
+
+/** Widget Header **/
+$xcp-widget-header-color: #EEEEEE !default;
+$xcp-widget-header-border-color: #707070 !default;
+$xcp-widget-header-background-color: null !default;
+$xcp-widget-header-background-gradient: none !default;
+$xcp-widget-use-gradients: true !default;
+$xcp-widget-header-padding: 5px 0px !default;
+
+/** ColumnBox Header **/
+$xcp-columnbox-header-text-font-size: 16px !default;
+$xcp-columnbox-header-text-font-weight: bold !default;
+$xcp-columnbox-header-text-font-color: #363636 !default;
+
+
+/** Widget Button **/
+$xcp-widget-button-color: #3399CC !default;
+$xcp-widget-button-color-over: adjust-color($xcp-widget-button-color, $saturation: 10%, $lightness: 10%) !default;
+$xcp-widget-button-color-focus: $xcp-widget-button-color !default;
+$xcp-widget-button-color-pressed: adjust-color($xcp-widget-button-color, $saturation: -5%, $lightness: -5%) !default;
+$xcp-widget-button-color-disabled: #D7D7D7 !default;
+
+$xcp-widget-button-border-color-focus: #FF9900 !default;
+
+$xcp-widget-button-use-gradients: false !default;
+$xcp-widget-button-radius: 0px !default;
+$xcp-widget-button-border-width: 0px !default;
+$xcp-widget-button-padding: 3px 24px !default;
+$xcp-widget-button-margin: 0px 10px !default;
+$xcp-widget-button-icon-size: 16px !default;
+
+
+/** Widget Panel **/
+$xcp-widget-panel-color: #C3D2E1 !default;
+$xcp-widget-panel-use-gradients: true !default;
+
+/** Widget Labels **/
+$xcp-widget-label-position: left !default;
+$xcp-widget-label-width: 150 !default;
+$xcp-widget-label-padding: 5 !default;
+//$xcp-widget-label-separator:
+
+/** List Selection **/
+$xcp-list-item-selection-color:  change-color($xcp-widget-panel-color, $saturation: 20%, $lightness: 85%) !default;
+$xcp-list-item-hover-color:  change-color($xcp-widget-panel-color, $saturation: 20%, $lightness: 90%) !default;
+
+$xcp-boundlist-item-hover-color: $xcp-widget-hover-color !default;
+$xcp-boundlist-selected-color: $xcp-widget-selection-color !default;
+$xcp-boundlist-item-selected-border-style: solid !default;
+$xcp-boundlist-item-selected-border-color: transparent !default;
+$xcp-boundlist-item-selected-border-width: 1px !default;
+
+
+/** Framework Tab **/
+$xcp-app-menu-label-text-font-family: $xcp-default-font-family !default;
+$xcp-app-menu-label-text-font-size: 14px !default;
+$xcp-app-menu-label-text-font-weight: bold !default;
+$xcp-app-menu-label-text-font-color: #40BFFF !default;
+$xcp-app-menu-label-text-font-color-over: #FFFFFF !default;
+$xcp-app-menu-label-text-font-color-focus: #FFFFFF !default;
+$xcp-app-menu-label-text-font-color-pressed: #FFFFFF !default;
+$xcp-app-menu-label-text-font-color-pressed-over: #3399CC !default;
+
+/** App Header Background **/
+$xcp-app-header-background: #000000 !default;
+$xcp-app-header-background-gradient-start: #3E3E3E !default;
+$xcp-app-header-background-gradient-end: #000000 !default;
+$xcp-app-header-background-gradient: color_stops($xcp-app-header-background-gradient-start 0%, $xcp-app-header-background-gradient-end 100%) !default;
+
+/** App Menu Background **/
+$xcp-app-menu-background-color: #5588BB !default;
+$xcp-app-menu-background-gradient: color_stops(lighten($xcp-app-menu-background-color, 25%), $xcp-app-menu-background-color 50%, darken($xcp-app-menu-background-color, 5%)) !default;
+$xcp-app-menu-background-use-gradients: false !default;
+
+/** App Menu Border **/
+$xcp-app-menu-border: none !default;
+$xcp-app-menu-border-color: #D7D7D7 !default;
+$xcp-app-menu-border-style: solid round !default;
+$xcp-app-menu-shadow: false !default;
+$xcp-app-menu-border-radius: 0px !default;
+$xcp-app-menu-bottom-border-size: 5px !default;
+$xcp-app-menu-bottom-border-color: #3399CC !default;
+$xcp-app-menu-bottom-inner-border-size: 1px !default;
+$xcp-app-menu-bottom-inner-border-color: #FFFFFF !default;
+
+/** App Menu button **/
+$xcp-app-menu-button-small-padding: 8px 0 6px 0 !default;
+$xcp-app-menu-button-small-text-padding: 5px !default;
+$xcp-app-menu-button-background-color: transparent;
+$xcp-app-menu-button-background-color-over: rgba(#3399CC, .25) !default;
+$xcp-app-menu-button-background-color-focus: $xcp-app-menu-button-background-color-over !default;
+$xcp-app-menu-button-background-color-pressed: none !default;
+
+$xcp-app-menu-button-background-gradient-over: none !default;
+$xcp-app-menu-button-background-gradient-focus: none !default;
+$xcp-app-menu-button-background-gradient-pressed: none !default;
+
+/** App Menu Button Border **/
+$xcp-app-menu-button-border: 1px !default;
+$xcp-app-menu-button-border-color: transparent !default;
+$xcp-app-menu-button-border-color-over: rgba(#40BFFF, .25) !default;
+
+/** App Menu marker **/
+$xcp-app-menu-marker-color: $xcp-app-menu-bottom-border-color !default;
+
+
+/** Nav Menu **/
+$xcp-nav-menu-background-color: change-color($xcp-widget-panel-color, $saturation:30%, $lightness: 97%) !default;
+
+
+/** Case Menu **/
+$xcp-case-menu-label-text-font-family: $xcp-default-font-family !default;
+$xcp-case-menu-label-text-font-size: 14px !default;
+$xcp-case-menu-label-text-font-weight: bold !default;
+$xcp-case-menu-label-text-font-color: #5588BB !default;
+$xcp-case-menu-background-color: #EEEEEE !default;
+$xcp-case-menu-background-use-gradients: true !default;
+
+$xcp-case-menu-border-color: #CCCCCC !default;
+$xcp-case-menu-border-style: solid, round !default;
+$xcp-case-menu-border-shadow: false !default;
+
+
+/** Master Background **/
+$xcp-master-background-color: #F0F5F9 !default;
+
+/** Page Background **/
+$xcp-page-background-color: transparent !default;
+$xcp-page-background-image: 'page/xcpbg_pattern.png' !default;
+
+/** Content Area **/
+$xcp-content-area-margin: 10px !default;
+$xcp-content-area-background: transparent !default;
+
+/** Menu, Context Menu **/
+$xcp-menu-body-padding: 0 10px 0 10px !default;
+$xcp-menu-item-text-padding: 10px 10px 10px 0 !default;
+$xcp_menu_background-color: #FFFFFF !default;
+$xcp-menu-item-background-over: #3399CC !default;
+$xcp-menu-separator-border-color: #D7D7D7 !default;
+
+/** Context menu item **/
+$xcp-context-menuitem-label-text-font-family: $xcp-default-font-family !default;
+$xcp-context-menuitem-label-text-font-size: 11px !default;
+$xcp-context-menuitem-label-text-font-weight: normal !default;
+$xcp-context-menuitem-label-text-font-color: #363636 !default;
+$xcp-context-menuitem-label-text-font-color-over: #FFFFFF !default;
+
+$xcp-window-shadow-color: #FFFFFF !default;
+
+/** load mask **/
+$xcp-loadmask-opacity: 0.6 !default;
+$xcp-loadmask-backgorund: #FFFFFF !default;
+
+/** Toolbar **/
+$xcp-toolbar-height: 36px !default;
+$xcp-toolbar-background-color: $xcp-page-background-color !default;
+
+//toolbar border
+$xcp-toolbar-border-color: #D7D7D7 !default;
+$xcp-toolbar-border-width-bottom: 1px !default;
+$xcp-toolbar-border-radius: 0px !default;
+
+// toolbar separator
+$xcp-toolbar-separator-color: #D7D7D7 !default;
+$xcp-toolbar-separator-highlight-color: #FFFFFF !default;
+$xcp-toolbar-separator-height: 24px !default;
+
+// Toolbar button
+$xcp-toolbar-button-border-radius: 0px !default;
+$xcp-toolbar-button-border-width: 1px !default;
+
+$xcp-toolbar-button-border-color: transparent !default;
+$xcp-toolbar-button-border-color-over: rgba(#40BFFF, .25) !default;
+$xcp-toolbar-button-border-color-pressed: #40BFFF !default;
+$xcp-toolbar-button-border-color-disabled: transparent !default;
+
+$xcp-toolbar-button-background-color: transparent !default;
+$xcp-toolbar-button-background-color-over: rgba(#3399CC, .25) !default;
+$xcp-toolbar-button-background-color-over-ie8: #CFEFFF !default;
+
+$xcp-toolbar-button-background-color-focus: $xcp-toolbar-button-background-color-over !default;
+$xcp-toolbar-button-background-color-pressed: #3399CC !default;
+$xcp-toolbar-button-background-color-disabled: transparent !default;
+
+$xcp-toolbar-button-background-gradient: null !default;
+$xcp-toolbar-button-background-gradient-over: null !default;
+$xcp-toolbar-button-background-gradient-focus: null !default;
+$xcp-toolbar-button-background-gradient-pressed: null !default;
+$xcp-toolbar-button-background-gradient-disabled: null !default;
+
+$xcp-toolbar-button-small-icon-size: 16px !default;
+
+$xcp-toolbar-button-small-padding: 2px 4px !default;
+
+//Toolbar button text
+$xcp-toolbar-button-text-color: $xcp-widget-label-text-font-color !default;
+$xcp-toolbar-button-text-color-over: $xcp-widget-label-text-font-color !default;
+$xcp-toolbar-button-text-color-focus: $xcp-widget-label-text-font-color !default;
+$xcp-toolbar-button-text-color-pressed: #FFFFFF !default;
+
+$xcp-toolbar-button-text-font-size: $xcp-widget-value-text-font-size !default;
+$xcp-toolbar-button-text-font-weight: $xcp-widget-value-text-font-weight !default;
+$xcp-toolbar-button-text-font-family: $xcp-widget-value-text-font-family !default;
+
+
+/** tab bar **/
+$xcp-tab-bar-background-color: transparent !default;
+$xcp-tab-bar-border-color: #959595 !default;
+
+/** tab button **/
+$xcp-header-tab-height: 26px !default;
+$xcp-header-tab-padding: 5px 10px 5px 10px !default;
+
+$xcp-header-tab-background: #3399CC !default;
+$xcp-header-tab-background-inactive: #e1f0f7 !default;
+$xcp-header-tab-background-active: #3399CC !default;
+$xcp-header-tab-text-shadow-active: rgba(0,0,0,.4) 0 0 5px !default;
+$xcp-header-tab-background-over: adjust-color($xcp-header-tab-background, $saturation: 10%, $lightness: 10%) !default;
+$xcp-header-tab-text-shadow-over: rgba(0,0,0,.4) 0 0 5px !default;
+$xcp-header-tab-background-disabled: #D7D7D7 !default;
+$xcp-header-tab-opacity-disabled: .5 !default;
+$xcp-header-tab-font-disabled: #959595 !default;
+$xcp-header-tab-icon-opacity: .5 !default;
+
+$xcp-header-tab-caret-width: 8px !default;
+$xcp-header-tab-caret-height: 8px !default;
+$xcp-header-tab-caret-offset: 10px !default;
+
+/** ToolTip **/
+$xcp-tooltip-background-color: #e1f0f7 !default;
+$xcp-tooltip-padding: 5px !default;
+$xcp-tooltip-border-color: #D7D7D7 !default;
+
+/** Window **/
+$xcp-window-fill-color: #EEEEEE !default;
+
+/** Date picker **/
+$xcp-datepicker-border-color: transparent !default;
+
+$xcp-datepicker-header-background-color: transparent !default;
+$xcp-datepicker-header-background-gradient: null !default;
+$xcp-datepicker-header-border-color: #D7D7D7 !default;
+
+$xcp_datepicker-item-hover-background-color: $xcp-widget-hover-color !default;
+
+$xcp-datepicker-toolbar-button-label-font-size: 11px !default;
+$xcp-datepicker-th-background-color: #EEEEEE !default;
+$xcp-datepicker-th-background-gradient: null !default;
+
+$xcp-datepicker-today-item-border-color: #009900 !default;
+$xcp-datepicker-today-item-background-color: transparant !default;
+$xcp-datepicker-today-item-selected-background-color: $xcp-widget-selection-color !default;
+$xcp-datepicker-selected-item-background-color: $xcp-widget-selection-color !default;
+$xcp-datepicker-selected-item-border-width: 0px !default;
+$xcp-datepicker-today-selected-item-border-width: 1px !default;
+
+$xcp-datepicker-selected-item-border-color: transparent !default;
+
+$xcp-datepicker-footer-background-color: transparent !default;
+
+$xcp-monthpicker-item-hover-background-color: $xcp-widget-hover-color !default;
+$xcp-picker-toolbar-button-padding: 3px 10px !default;

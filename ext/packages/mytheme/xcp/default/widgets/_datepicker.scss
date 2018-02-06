@@ -1,0 +1,139 @@
+@mixin xcp-datetime {
+	.#{$prefix}datepicker {
+        border: none;
+        @include xcp-box-shadow;
+    }
+
+    .#{$prefix}datepicker-month {
+        .#{$prefix}btn-default-small .#{$prefix}btn-inner {
+    	    @include text-shadow(none);
+    		text-align: center;
+            @include xcp-toolbar-button-label-text;
+    	}
+        span {
+            color: $xcp-widget-label-text-font-color !important;
+        }
+    }
+    
+    .#{$prefix}datepicker-next {
+      	$background-image: theme-image($datepicker-next-image, $relative-image-path-for-uis);
+        background-image: url($background-image);
+        background-position:1px -120px;
+        a {
+        	background-position:1px -120px;
+            background-image: url($background-image);
+             &:hover {
+             	background-position:-14px -120px;
+                background-image: url($background-image);
+             }
+        }
+    }
+    
+    .#{$prefix}datepicker-prev {
+       	$background-image: theme-image($datepicker-prev-image, $relative-image-path-for-uis);
+        background-image: url($background-image);
+        background-position:1px -105px;
+        a {
+        	background-position:1px -105px;
+            background-image: url($background-image);
+            &:hover {
+            	background-position:-14px -105px;
+                background-image: url($background-image);
+            }
+        }
+    }
+    
+    table.#{$prefix}datepicker-inner{
+    	th {
+            vertical-align: middle;
+            min-height: 24px;
+        }
+        
+        a {
+            font: normal 11px $datepicker-th-font-family;
+            text-align: center;
+        }
+
+        .#{$prefix}datepicker-selected {
+            a {
+                border-width: $xcp-datepicker-selected-item-border-width;
+            }
+        }
+
+        .#{$prefix}datepicker-today {
+            a {
+                background-color: $xcp-datepicker-today-item-background-color;
+            }
+        }
+        .#{$prefix}datepicker-today.#{$prefix}datepicker-selected {
+            a {
+                border-width: $xcp-datepicker-today-selected-item-border-width;
+                background-color: $xcp-datepicker-today-item-selected-background-color;
+            }
+        }
+
+        
+        .#{$prefix}datepicker-prevday,
+        .#{$prefix}datepicker-nextday {
+            a {
+            	color: $datepicker-item-color;
+                @include opacity(0.4);
+            }
+        }
+    }
+    
+    .#{$prefix}datepicker-footer,
+    .#{$prefix}monthpicker-buttons {
+        .#{$prefix}btn-default-small {
+            padding: $xcp-picker-toolbar-button-padding;
+        }
+    }
+
+    .#{$prefix}datepicker-footer {
+        border-color: $xcp-widget-border-color transparent;
+    }
+
+     // month picker
+    .#{$prefix}monthpicker {
+        @include xcp-box-shadow;
+    }
+
+    .#{$prefix}monthpicker-months {
+        border-right: 1px solid $xcp-widget-border-color;
+    }
+
+    .#{$prefix}monthpicker-yearnav button {
+        background-color: transparent;
+        $background-image: theme-image('shared/xcp-sprites.png', $relative-image-path-for-uis);
+        background-image: url($background-image);
+    }
+
+    .#{$prefix}form-time-trigger {
+        $background-image: theme-image('form/time-trigger.gif',$relative-image-path-for-uis-ext-default-theme);
+        background-image: url($background-image);
+    }
+
+     //nlg support
+    @if not $supports-gradients or $compile-all {
+        .#{$prefix}nlg {
+            @if $datepicker-header-background-gradient != null {
+                .#{$prefix}datepicker-header {
+                    $background-image: theme-image('datepicker/datepicker-header-bg.gif', $relative-image-path-for-uis);
+                    background-image: url($background-image);
+                    background-repeat: repeat-x;
+                    background-position: top left;
+                }
+            }
+
+            @if $datepicker-footer-background-gradient != null {
+                .#{$prefix}datepicker-footer,
+                .#{$prefix}monthpicker-buttons {
+                    $background-image: theme-image('datepicker/datepicker-footer-bg.gif', $relative-image-path-for-uis);
+                    background-image: url($background-image);
+                    background-repeat: repeat-x;
+                    background-position: top left;
+                }
+            }
+        }
+    }
+}

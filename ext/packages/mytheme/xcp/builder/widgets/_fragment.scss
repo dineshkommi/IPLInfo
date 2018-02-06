@@ -1,0 +1,12 @@
+@mixin xcp-builder-fragment {
+	.xcp_fragment-cls .xcp-content-area {
+		margin: 0px;
+		position: relative;
+		height: 100%;
+	}
+	
+    .xcp_fragment-cls .xcp-content-area SPAN {
+	 	position: absolute;
+	 	top: 50%;
+	}
+}

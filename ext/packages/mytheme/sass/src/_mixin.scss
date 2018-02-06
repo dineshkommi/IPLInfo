@@ -1,0 +1,75 @@
+@mixin up-arrow-background {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANBAMAAACAxflPAAAAJFBMVEUAAAAFFiYFFiYFFiYFFiYFFiYFFiYFFiYFFiYFFiYFFiYFFiamhgyRAAAAC3RSTlMAECw1OD4/cIOIjAbLcQsAAAAuSURBVAhbY2DACTgcIFKrt4Aprq2rwQKrHbhAAiACJDAbiLk2MTAkg+QKcRoGAMpaCQ+bONd4AAAAAElFTkSuQmCC) !important;
+}
+
+@mixin down-arrow-background {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANBAMAAACAxflPAAAAIVBMVEUAAAAFFiYFFiYFFiYFFiYFFiYFFiYFFiYFFiYFFiYFFib1/YJ5AAAAC3RSTlMAAgMJDxhKubzI8zMIGV8AAAAySURBVAhbY2BAA4ogwoCBoUKBgYF1GQNDVBMEs65QACIGEAfEBQqsBHMhsiDAAuFiBwAPyAkVtabb9QAAAABJRU5ErkJggg==) !important;
+}
+
+@mixin columnbox-collapse-icon-align-right($left-align) {
+    .x-tool {
+        left : #{$left-align}px !important;
+    }
+    .x-header-text-container {
+        left: 0 !important;
+    }
+    .x-tool-collapse-top {
+        @include up-arrow-background;
+        width: 13px;
+    }
+    .x-box-inner .x-tool-expand-bottom {
+        @include down-arrow-background;
+        width: 13px;
+    }
+    .x-panel-header-xcp-column-box-ui {
+        height: 55px;
+    }
+}
+
+/***** Approval Page Priority and Classification Mixins Starts ****/
+@mixin priority-classification($padding-top, $padding-right, $padding-bottom, $padding-left, $color, $background-color, $border-width, $border-color){
+  border-radius: 2px;
+  color: #{$color};
+  font-family: SourceSansPro-Regular !important;
+  font-size: 12px !important;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  padding: #{$padding-top} #{$padding-right} #{$padding-bottom} #{$padding-left};
+  background-color: #{$background-color};
+  border-width: #{$border-width};
+  border-color: #{$border-color};
+  border-style: solid;
+}
+/***** Approval Page Priority and Classification Mixins End ****/
+
+/***** Approval Draft Tab Mixins  ****/
+@mixin sans-pro-font {
+  font: 16px/1.2 "SourceSansPro-Regular" !important;
+}
+
+@mixin sans-pro-font-semibold {
+  font: 16px/1.2 "SourceSansPro-SemiBold" !important;
+}
+
+@mixin right-float {
+  position: relative !important;
+  float: right;
+  left: auto !important;
+}
+
+@mixin decision-palette-background($background, $color) {
+  background: $background;
+  color: $color;
+}
+
+@mixin decision-palette-span {
+  font-size: 16px;
+  display: inline-block;
+  text-transform: uppercase;
+  height: 24px;
+  border-radius: 2px;
+  padding: 2px 5px;
+  vertical-align: top;
+  text-align: center;
+  min-width: 30px !important;
+}

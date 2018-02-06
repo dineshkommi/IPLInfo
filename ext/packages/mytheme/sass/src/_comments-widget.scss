@@ -1,0 +1,177 @@
+/*FATHOM-1087-BWCComments-Widget*/
+
+//TODO: would need to revist this as height
+// is specific to Approve cards
+.bwc-comments-dataview-task-performer {
+  border: 1px solid rgba(5, 22, 38, 0.1);
+  height: 455px !important;
+}
+
+.bwc-comments-dataview-non-task-performer {
+  border: 1px solid rgba(5, 22, 38, 0.1);
+  height: 643px !important;
+}
+
+.bwc-comments-widget {
+  height: 100% !important;
+  .annot-number {
+    background: #FFFF7F;
+    height: 16px;
+    width: 16px;
+    font-size: 13px;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    margin: 0 5px 0 0;
+  }
+}
+
+.bwc-comments-widget-body {
+  height: 100% !important;
+}
+
+.each-comment {
+  background-color: rgba(5, 22, 38, 0.05);
+  border-radius: 2px;
+  padding: 10px;
+  @include sans-pro-font;
+  margin: 10px 10px;
+  .x-toolbar .x-box-inner {
+    background-color: #e5e7e9;
+    border: 1px solid #b5b8c8;
+  }
+}
+
+.comments-name {
+  font-weight: bold !important;
+  padding-right: 15px;
+  font: 16px/1.2 "SourceSansPro-Regular";
+  color: black;
+}
+
+.comments-date {
+  color: rgba(5,22,38,0.40);
+  @include sans-pro-font;
+  padding-right: 15px;
+}
+
+.comment-content-padding {
+  padding-top: 3px;
+  @include sans-pro-font;
+  font {
+    font-family: "SourceSansPro-Regular" !important;
+  }
+}
+
+.comment-content-padding p {
+  margin: 0px !important;
+  display: block;
+}
+
+.comment-content-padding p:nth-of-type(1) {
+  display: inline !important;
+}
+
+.bwc-no-comments-msg {
+  margin: 30px 0 0 10px !important;
+  top: 50px !important;
+  display: inline-block;
+  font-size: 14px;
+ }
+
+.comments-edit {
+  padding-left: 10px;
+  float: right;
+  font-size: 80%;
+  background-color: #3399cc;
+  color:white;
+  margin-top:-18px;
+  margin-bottom:10px;
+}
+
+.comments-delete {
+  float: right;
+  font-size: 120%;
+  color: #e03131;
+  margin-top: -15px;
+  margin-bottom: 5px;
+  cursor:pointer;
+  font-size: 14px !important;
+}
+
+.comments-edit-pencil {
+  float: right;
+  color: #1b6ec2;
+  margin-top: -14px;
+  margin-right: 20px;
+  cursor:pointer;
+  font-size: 14px !important;
+}
+
+.bwc-comments-add-btn {
+  background-color: #1b6ec2;
+  margin: 5px 0 5px 0 !important;
+  .x-btn-inner  {
+    font-family: "SourceSansPro-Bold" !important;
+    font-size: 14px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    outline: none;
+    border: none;
+    transition: background .3s;
+    line-height: 1em;
+    padding: 5px 10px 5px;
+  }
+}
+
+.bwc-comments-add-panel {
+  background-color: rgba(5,22,38,0.05);
+  padding: 10px 10px 0;
+  .x-toolbar .x-box-inner {
+    background-color: #e5e7e9;
+    border: 1px solid #b5b8c8;
+  }
+  .x-table-plain {
+    margin: 0 !important;
+  }
+  textarea {
+    resize: both !important;
+    vertical-align: top;
+    height: auto !important;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    box-sizing: border-box;
+    border: 1px solid rgba(5, 22, 38, .2);
+    background: #fff;
+    border-radius: 2px;
+    outline: none;
+    color: #07111c;
+    font-size: 16px;
+    line-height: 19px;
+    height: 65px !important;
+    width: 100%;
+    margin: 0;
+    font-family: "SourceSansPro-Regular" !important;
+  }
+}
+
+
+.bwc-comments-save-btn,
+.bwc-comments-cancel-btn {
+  background-color: #1b6ec2;
+  padding: 4px 5px 4px !important;
+  font-family: "SourceSansPro-Regular" !important;
+  font-size: 12px !important;
+  font-weight: normal;
+  border: none !important;
+}
+
+.bwc-comments-save-btn {
+  margin-right: 3px;
+  margin-left: 15px !important;
+}
+
+.bwc-comments-cancel-btn {
+  margin-left: 10px !important;
+}

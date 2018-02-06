@@ -1,0 +1,371 @@
+.xcpid_approve_drafts_tab {
+  padding-top: 16px !important;
+}
+
+.approval-accordion .x-panel-body-default {
+  border: none !important;
+}
+
+.approve-card {
+  @include sans-pro-font-semibold;
+  margin-bottom: 40px !important;
+  color: #000;
+  background-color: #fff;
+  min-width: 320px;
+  min-height: 55px !important;
+  -webkit-font-smoothing: antialiased;
+  .x-panel-header {
+    border: none !important;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+  }
+  > .x-panel-header .x-box-inner {
+    height: 39px !important;
+  }
+  > .x-panel-body {
+    padding: 0 18px 20px !important;
+  }
+}
+
+
+/*************************************/
+/******* Approval Card header ********/
+/*************************************/
+.approve-card {
+  &.x-accordion-item .x-accordion-hd {
+    background-color: #fff !important;
+    padding: 8px 18px;
+    min-height: 55px !important;
+  }
+  .x-panel-body {
+    border: none;
+  }
+  .x-panel-header-body .x-draw-text {
+    font-size: 22px !important;
+    top: 5px !important;
+    font-weight: 600;
+  }
+  .x-toolbar {
+    .x-box-inner {
+      min-height: 32px;
+    }
+    border-top: solid 1px rgba(5, 22, 38, 0.1);
+  }
+}
+
+/**** Approver Decision Buttons ****/
+.approve-buttons {
+  @include right-float;
+  padding: 2px 0 0 15px;
+  z-index: 1;
+  top: 2px !important;
+  .x-btn {
+    .x-btn-inner {
+      margin: 0 3px 5px;
+      display: initial;
+      font-family: inherit;
+      font-size: 16px !important;
+      font-weight: 700 !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      height: inherit !important;
+    }
+    vertical-align: top;
+    border: none !important;
+    padding: 7px 12px 6px !important;
+    margin: 0 3px 5px !important;
+    border-radius: 2px;
+    transition: background .3s;
+    background: #fff;
+    color: #fff;
+    a {
+      height: 100% !important;
+    }
+    &.x-btn-pressed {
+      border: none !important;
+    }
+  }
+  .btn-approve {
+    background: $color-green-8;
+    &.x-btn-over,
+    &.approve-done {
+      background: #057a57 !important;
+    }
+    &.approve-disabled {
+      background-color: rgba(5,22,38,0.20);
+    }
+    &.x-btn-focus {
+      background: #08684b;
+    }
+  }
+  .btn-suggest {
+    @extend .btn-approve
+  }
+  .btn-return {
+    background: $warning-red;
+    &.x-btn-over,
+    &.approve-done {
+      background: #c42727 !important;
+    }
+    &.approve-disabled {
+      background-color: rgba(5,22,38,0.20);
+    }
+    &.x-btn-focus {
+      background: #ab1717;
+    }
+  }
+  /* Add checkmark to enhance feedback to the user */
+  .approve-done .x-btn-inner:before {
+    content: "\f00c";
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    margin-right: 4px;
+  }
+}
+
+/**** Approver Decision Palettes ****/
+.approve-decision-palette {
+  @include right-float;
+  @include sans-pro-font;
+  padding: 2px 0 0 15px;
+  top: 5px !important;
+  margin-right: 15px !important;
+  span {
+    @include decision-palette-span;
+    color: $color-green-8;
+    margin: 0 2px 5px !important;
+  }
+  /* Members who have approved — green */
+  .approve-decision-0,
+  .approve-decision-1 {
+    @include decision-palette-background(rgba(5, 146, 104, 0.15),  $color-green-8);
+  }
+  /* Members who have returned the draft — red */
+  .approve-decision-2 {
+    @include decision-palette-background(rgba(224, 49, 49, 0.15),  $warning-red);
+  }
+  /* Members who have not approved yet — orange */
+  .approve-decision-99 {
+    @include decision-palette-background(rgba(240, 140, 2, 0.15),  #F08C02);
+  }
+  /* Member viewing the draft has approved — green/bold */
+  .approve-decision-0.approve-current-approver-true,
+  .approve-decision-1.approve-current-approver-true {
+    @include decision-palette-background($color-green-8,  #fff);
+  }
+  /* Member viewing the draft has returned the draft — red/bold */
+  .approve-decision-2.approve-current-approver-true {
+    @include decision-palette-background($warning-red,  #fff);
+  }
+  /* Member viewing the draft has not approved yet — orange/bold */
+  .approve-decision-99.approve-current-approver-true {
+    @include decision-palette-background(#F08C02,  #fff);
+  }
+  /* Parallel approvers */
+  .approve-decision-0.approve-parallel-group-true,
+  .approve-decision-1.approve-parallel-group-true {
+    border-bottom: 2px solid #02593F !important;
+  }
+  .approve-decision-2.approve-parallel-group-true {
+    border-bottom: 2px solid #A01313 !important;
+  }
+  .approve-decision-99.approve-parallel-group-true {
+    border-bottom: 2px solid #B56A03 !important;
+  }
+}
+
+.approve-decision-palette-pending span {
+  @include decision-palette-span;
+  @include decision-palette-background(#F08C02,  #fff);
+  margin: 8px 5px;
+}
+
+.approve-decision-palette-actioned {
+  span {
+    @include decision-palette-span;
+    margin: 8px 5px;
+  }
+  .approve-decision-0,
+  .approve-decision-1 {
+    @include decision-palette-background($color-green-8,  #fff);
+  }
+  .approve-decision-2 {
+    @include decision-palette-background($warning-red,  #fff);
+  }
+}
+
+/* Hide Approval buttons and decision palettes by default. */
+.x-panel-collapsed {
+  .approve-buttons,
+  .approve-decision-palette {
+    display: none;
+  }
+  /* Show current approve's pending and actioned palette only when collapsed */
+  .approve-decision-palette-pending,
+  .approve-decision-palette-actioned {
+    display: inherit !important;
+  }
+}
+
+/* Hide pending and actioned palette by default. */
+.approve-decision-palette-pending,
+.approve-decision-palette-actioned {
+  @include sans-pro-font;
+  display: none  !important;
+}
+
+
+/******************************/
+/*** Approval Card toolbar ***/
+/*****************************/
+.approve-card-toolbar {
+  .x-box-inner {
+    display: block !important;
+  }
+  .x-form-item {
+    margin: 0 21px 0 5px !important;
+  }
+}
+
+/*** Approval Documents dropdown ***/
+.approve-card-dropdown {
+  padding: 0 8px !important;
+  margin: 0 21px 0 0 !important;
+  .x-form-text {
+    @include sans-pro-font;
+    height: 32px !important;
+    padding: 0 6px !important;
+    line-height: 19px;
+    background-image: none !important;
+    background: #fff;
+    border: 1px solid rgba(5, 22, 38, 0.2) !important;
+    border-radius: 2px 0 0 2px;
+    border-right: none !important;
+  }
+  .x-form-arrow-trigger {
+    width: 28px !important;
+    height: 32px !important;
+    padding: 8px !important;
+    background: #f2f3f4 !important;
+    border-radius: 0 2px 2px 0;
+    border: 1px solid rgba(5, 22, 38, 0.2) !important;
+    font-size: 16px;
+    &:before {
+      content: "\f107";
+    }
+    &.x-form-arrow-trigger-over {
+      background: #f3f8fc !important;
+      color: #1857b5 !important;
+    }
+  }
+  .x-field-label-cell label {
+    @include sans-pro-font;
+    font-weight: 400;
+    text-align: center !important;
+  }
+  tr > td {
+    vertical-align: middle;
+  }
+}
+
+.approve-card-dropdown-option .x-boundlist-item {
+  @include sans-pro-font;
+  line-height: 19px;
+  padding: 0 6px !important;
+}
+
+/*** Approval Related Document button ***/
+.approve-related-doc-btn {
+  padding: 0 !important;
+  margin: 0 3px 4px 5px !important;
+  height: 32px !important;
+  border-radius: 2px !important;
+  background: rgba(5, 22, 38, 0.1);
+  font-weight: normal;
+  color: $color-black-8;
+  border: none !important;
+
+  &.x-btn-over {
+    background: rgba(5, 22, 38, 0.15);
+  }
+  &.x-btn-pressed {
+    background: rgba(5, 22, 38, 0.2);
+  }
+  a {
+    @include sans-pro-font;
+    display: inline-block;
+    font-weight: normal;
+    color: $color-black-8;
+    outline: none;
+    padding: 7px 12px 6px;
+    margin: 0 3px 5px;
+    border-radius: 2px;
+    transition: background .3s;
+  }
+  .x-btn-inner {
+    color: $color-black-8;
+  }
+}
+
+.approve-related-doc-btn-active,
+.approve-related-doc-btn.x-btn-focus {
+  background: rgba(5, 22, 38, 0.2);
+}
+
+/***********************************/
+/*** Approval Content Viewer    ***/
+/**********************************/
+.approve-card .xcp_viewer-cls {
+  padding-top: 0 !important;
+  margin-top: -5px !important;
+}
+
+.approve-viewer {
+  margin-right: 20px !important;
+  .x-panel-header {
+    display: none !important;
+  }
+  .rmViewerToolBar .x-box-target {
+    left: 28% !important;
+  }
+  .rmPageGridView {
+    overflow-x: hidden !important;
+  }
+  .x-mask {
+    z-index: -1;
+  }
+}
+
+/*** Necessary to ensure proper click of anchor **/
+.viewer-download-btn {
+  height: 34px !important;
+  width: 33px !important;
+  padding: 0 !important;
+  div {
+    height: 30px !important;
+  }
+  .x-btn-button {
+    height: inherit !important;
+  }
+  .x-btn-icon-el {
+    margin: 10px 9px !important;
+    color: #2f77b1;
+  }
+}
+
+.approve-card-hide {
+  display: none;
+}
+
+
+.approve-card-comments-header  {
+  position: relative !important;
+  float: right !important;
+  margin-right: 493px !important;
+  left: 0 !important;
+  font: 20px/1.2 "SourceSansPro-Bold" !important;
+  font-weight: 700 !important;
+  color: #000;
+}

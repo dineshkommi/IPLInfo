@@ -1,0 +1,39 @@
+/**
+ * @mixin ext-toolbar-ui
+ * @class Ext.toolbar.Toolbar
+ * @param {String} $ui The name of the UI
+ * @param {Color} $background-color The background color of the toolbar (defaults to transparent)
+ * @param {Gradient/color-stops} $background-gradient The background gradient of the toolbar (defaults to null)
+ * @param {Color} $border-color The border color of the toolbar (defaults to null)
+ */
+@mixin xcp-toolbar-ui(
+    $ui,
+
+    $background-color: transparent,
+    $background-gradient: null,
+
+    $border-color: null,
+    $border-radius: null
+) {
+    .#{$prefix}toolbar-#{$ui} {
+        @if $border-color != null {
+            border-color: $border-color;
+        }
+        @if $border-radius != null {
+            @include border-radius($border-radius);
+        }
+
+        @include background-gradient($background-color, $background-gradient);
+    }
+
+    @if not $supports-gradients or $compile-all {
+        @if $background-gradient != null {
+            .#{$prefix}nlg {
+                .#{$prefix}toolbar-#{$ui} {
+                    background-image: theme-image($theme-name, 'toolbar/toolbar-#{$ui}-bg.gif', false, $relative-image-path-for-uis) !important;
+                    background-repeat: repeat-x;
+                }
+            }
+        }
+    }
+}

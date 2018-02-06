@@ -1,0 +1,1113 @@
+//******************************
+// Variables section
+
+// Useful reference for variables than can be overridden can be found here:
+//  %XCP_DESIGNER_PATH%\plugins\com.emc.xcp.uitemplate.ui_1.0.0.201405220911\WebContent\js\resources\themes\stylesheets\xcp\default\variables
+
+// Default theme files are located here:
+//  %XCP_DESIGNER_PATH%\plugins\com.emc.xcp.uitemplate.ui_1.0.0.201405220911\WebContent\js\resources\themes\stylesheets\xcp\default
+
+
+// [Add variable overrides here]
+
+//******************************
+//	Variables override _xcp.scss
+//******************************
+/** Default font **/
+$xcp-default-font-size: 14px !default;
+/** Widget Button Text **/
+$xcp-widget-button-text-font-size: 12px !default;
+/** Link Text **/
+$xcp-link-text-font-size: $xcp-default-font-size !default;
+/** ColumnBox Header **/
+$xcp-columnbox-header-text-font-size: 18px !default;
+
+//******************************
+//	Variables override _facet.scss
+//******************************
+/** Default font **/
+$xcp-facet-value-over-font-size: 14px;
+
+//******************************
+//	Variables override _grid.scss
+//******************************
+$xcp-default-font-family: Helvetica, Arial, sans-serif;
+$font-family: $xcp-default-font-family;
+$xcp-grid-row-cell-font: normal 14px  $font-family;
+$xcp-grid-row-body-font: normal 14px $font-family;
+
+//******************************
+//	Highlighting color scheme
+//******************************
+$oc-red-1: #ffe3e3; /* Red 1 */
+$oc-grape-1: #f3d9fa; /* Grape 1 */
+$oc-indigo-1: #dbe4ff; /* Indigo 1 */
+$oc-blue-1: #ccedff; /* Blue 1 */
+$oc-cyan-1: #c5f6fa; /* Cyan 1 */
+$oc-teal-1: #c3fae8; /* Teal 1 */
+$oc-green-1: #d3f9d8; /* Green 1 */
+$oc-lime-1: #e9fac8; /* Lime 1 */
+$oc-yellow-1: #fff3bf; /* Yellow 1 */
+$oc-orange-1: #ffe8cc; /* Orange 1 */
+
+//******************************
+//	Selection of colors
+//******************************
+$background-page: #F7F9FA;
+$background-qb: #ECF0F3;
+$input-field-border: #C1C7CD;
+$text-primary: #3D464D;
+$text-placeholder: #C1C7CD;
+$warning-red: #E03131;
+$success-green: #2f9e44;
+$disabled-grey: #ECECEC;
+$link-blue: #1B6EC2;
+$deep-blue: #1762AB;
+$link-hover: #5BA1E8;
+
+// Provided by Neysan in FATHOM-1060
+$color-black-8: #051626;
+$color-green-8: #059268;
+// Below is a duplicate of $link-blue. Need to consult with
+// Neysan and consolidate the styles
+$color-blue-8: #1B6EC2;
+$color-blue-9: #1259A0;
+
+@import "mixin";
+
+//******************************
+//	Overrides
+//******************************
+$xcp-widget-value-text-font-size: $xcp-default-font-size;
+
+// EXAMPLE : $font-size: 32px; //only variables with "!default;" search in
+// If variable overrides have been defined, uncomment this line
+@import 'xcp/default/xcp-default';
+
+/* Change background colour of *all* pages */
+body > span > div[id^="viewport"] {
+  background-color: $background-page;
+}
+
+//******************************
+// CSS Overrides
+//
+//******************************
+// Labels
+//Bold the labels
+.x-form-item-label {
+  font-weight: bold;
+}
+
+//Font Size: styles inside ExtJS SCSS fields that cannot be overrided with SCSS variables
+// value display for widgets
+// table rows, headers
+// menu items and toolbar
+.x-form-display-field,
+.x-grid-row .x-grid-cell,
+.x-column-header-inner .x-column-header-text,
+.x-menu-item-text, .x-toolbar,
+//.x-panel-body-default
+{
+  font-size:14px !important;
+}
+
+.x-form-field {
+  font-size:14px !important;
+}
+//force the contents of a table with class set to allContent to display all content on all columns and not only the first N characters
+.allContent .x-grid-cell-inner {
+  white-space: normal;
+}
+
+//FTM-25 - Don't remove newlines when displaying field data
+//Workaround for SR #65504434 - Cannot display single attribute string containing multiple lines.
+.x-form-display-field {
+  white-space: pre-wrap;
+}
+//FTM-117 - change style to visually identify the focus when navigating through a list of links in a grid.
+.x-grid a, .x-grid a:link, .x-grid a:visited {
+  display: block;
+  font-size: 14px;
+}
+.x-grid a:focus {
+  border-bottom: dotted 1px;
+}
+
+//Change Look & Feel of unavailable functionality
+.unavailable {
+  background-color: #B00 !important;
+}
+//generate a right border
+.border-right {
+  border-right: solid 1px;
+}
+//generate a full border
+.border {
+  border: solid 1px;
+}
+
+// FTM-386 - fix sign off logo
+// Fix the sign out button
+.sign_out_button .x-btn-arrow {
+  margin-right: 0;
+}
+
+// View Full Abstract
+// Extend the abstract text inside table cell
+.xcp_results_list-cls .expanded-rows .x-grid-row .x-grid-cell {
+    vertical-align: top !important;
+  overflow: auto;
+}
+
+.expanded-rows .x-grid-cell-inner {
+  white-space: inherit;
+}
+
+
+// FTM-1089
+// Hide the text in the communication search result list
+.comm_search_results .x-grid-rowbody {
+  display: none;
+}
+
+// FTM-1135
+// The label of the search fields and the buttons inside the search criteria need to be smaller
+.comm-search-criteria-label label{
+  font-size: 12px !important;
+}
+.comm-search-criteria-value {
+  font-size: 12px !important;
+}
+.comm-search-button {
+  padding: 6px 6px !important;
+  font-size: 12px !important;
+}
+
+
+// Button View Communication
+.view-document-btn {
+  display: inline-block;
+  padding: 6px 12px;
+  border: 1px solid transparent;
+  color: #F0EDEB;
+  background-color: #527FC2;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+// FTM-1138
+// Apply overflow:hidden to readability tab objects to hide unnecessary scrollbars
+.review-comm-tab > div > div > div.x-panel-body {
+  overflow: hidden !important;
+}
+
+
+//*********************************************************************************
+// ***FATHOM-688 - Add style to a message when a task is acquired by another user.
+//*********************************************************************************
+.task-assigned-to-user h2 {
+  border-radius: 3px;
+  background-color: rgb(212, 149, 39);
+  margin-left: 10px!important;
+  padding: 7px 6px!important;
+  height: 29.09px!important;
+  margin-top: 43px!important;
+  margin-bottom: 0px!important;
+  width:auto !important;
+  display:inline-block !important;
+}
+
+.task-assigned-to-user h2 {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 13px!important;
+}
+
+.task-assigned-to-user span {
+  margin: 4px!important;
+}
+
+
+.task-agenda-item-acquired h2 {
+  border-radius: 3px;
+  background-color: rgb(212, 149, 39);
+  margin-left: 10px!important;
+  padding: 7px 6px!important;
+  height: 29.09px!important;
+  margin-top: 6px!important;
+  margin-bottom: 0px!important;
+  width:auto !important;
+  display:inline-block !important;
+}
+
+
+.task-agenda-item-acquired h2 {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 13px!important;
+}
+
+
+.task-agenda-item-acquired span {
+  margin: 2px!important;
+}
+
+//*************************************************************************************
+// FATHOM-721 - Continuation of 688, set alignment to columns that have value displays 
+//*************************************************************************************
+.set-alignment h2
+{
+  border-radius: 3px;
+  background-color: rgb(212, 149, 39);
+  height: 29.09px!important;
+  margin-bottom: 0px!important;
+  width:auto !important;
+  display:inline-block !important;
+  margin-top: 6px!important;
+  padding: 7px 6px!important;
+  margin-left: 10px!important;
+}
+
+.set-alignment h2 {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 13px!important;
+}
+
+.set-alignment span {
+  margin: 3px!important;
+}
+
+/** Class for the style of Entity related Tasks */
+
+.set-alignment-entity h2
+{
+  border-radius: 3px;
+  background-color: rgb(212, 149, 39);
+  height: 29.09px!important;
+  margin-bottom: 0px!important;
+  width:auto !important;
+  display:inline-block !important;
+  margin-top: 0px!important;
+  padding: 7px 6px!important;
+  margin-left: 10px!important;
+}
+
+.set-alignment-entity h2 {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 13px!important;
+}
+
+.set-alignment-entity span {
+  margin: 3px!important;
+}
+
+/*AR_T_Manage Archive Form task*/
+
+.set-alignment-archive h2 {
+    border-radius: 3px;
+    background-color: #d49527;
+    height: 29.09px!important;
+    margin-bottom: 0px!important;
+    width: auto !important;
+    display: inline-block !important;
+    margin-top: 0px!important;
+    padding: 7px 6px!important;
+    margin-left: -4px!important;
+}
+
+.set-alignment-archive h2 {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 13px!important;
+}
+
+.set-alignment-archive span {
+  margin: 3px!important;
+}
+
+//FATHOM-974
+//Styling set on communications search screen & pane-scrollbar styles
+.communications-search-query-builder-pane-scrollbar {
+  height: 828px!important;
+  overflow-y: auto!important;
+  display: block;
+  margin-bottom: 0px!important;
+}
+
+//Styling set on communication results screen and review communication screen
+.communications-results-and-review-comm-tab {
+  height: 925px!important;
+  overflow-y: auto!important;
+  display: block;
+  margin-bottom: 0px!important;
+}
+
+//Create a style to set global height on the entire communication search screen
+.sr-communications-styles {
+  margin-bottom: 0px!important;
+  height: 915px!important;
+}
+
+//Create a style to set global height on the entire communication search page
+.sr-communications-styles-outer {
+  margin-bottom: 0px!important;
+  height: 915px!important;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUAAAAABCAYAAACv43fXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAAASdEVYdFNvZnR3YXJlAEdyZWVuc2hvdF5VCAUAAAAZSURBVDhPY3zz4fN/hlEwCkbBKBhxgIEBAAtMA9D6yz/jAAAAAElFTkSuQmCC);
+  background-repeat: repeat-y;
+}
+
+//Style to enable the scrollbar on the communication search within set
+.communications-search-set-query-builder-pane-scrollbar {
+ height: 757px!important;
+ overflow-y: auto!important;
+ display: block;
+ margin-bottom: 0px!important;
+}
+
+.sr-communications-set-styles-outer {
+  margin-bottom: 0px!important;
+  height: 890px!important;
+}
+
+//FTM-868
+//Apply deep yellow color for the deceased person entity with word-break
+.name-deceased {
+  display: inline-block;
+  padding-left: 1px;
+  color: #c48420;
+  word-break: keep-all;
+}
+
+// *** FATHOM-1098 ***
+// Customized Fathom Login screen
+// Page background color
+#signin-page {
+  background-color:#EEEEEE;
+}
+
+// White strip
+#signin-area {
+  background-color:#FFFFFF;
+  width:100%;
+  margin-top:100px;
+}
+
+#signin-page .signin-title {
+	display:none;
+}
+// Page background color
+#signin-page .signin-panel {
+  top:10px;
+  margin:auto;
+  width:770px!important;
+  height: 350px!important;
+  background-color:#FFFFFF;
+  border-width: 0px;
+  box-shadow:none;
+  background:none;
+}
+
+#signin-page .signin-panel .x-panel-body {
+  border: solid 0px #FFFFFF;
+}
+
+#signin-page .signin-panel .signin-logo-panel .x-panel-body {
+  background: none;
+}
+
+#signin-page .signin-logo-panel {
+  background: url("icons/fathom-logo.png") no-repeat scroll 0 0 transparent;
+  background-size: 239px 250px;
+  width:250px!important;
+  height:250px!important;
+  float:left!important;
+}
+
+#signin-page .signin-form-panel, .signin-logo-panel {
+  margin-top:40px!important;
+}
+
+#signin-page .signin-form-panel {
+  float:right!important;
+  width:455px!important;
+}
+
+#signin-page .signin-panel > div {
+  width:100%!important;
+}
+
+#signin-page .signin-panel > div > span > div {
+  display:inline!important;
+}
+
+#signin-page .x-panel-body .x-panel-body-default .x-panel-body-default {
+  background-image:none!important;
+}
+
+#signin-page .signin-form > div.x-toolbar {
+  top: 140px!important;
+}
+
+// Hidden language drop down
+#j_locale-inputRow {
+  display:none;
+}
+
+//Rearranged sign in position
+#signin-page .signin-form > div.x-toolbar {
+  top: 140px!important;
+}
+
+#signin-page .x-box-target > div {
+      left: 318px!important;
+}
+// *********************************************************************
+
+.toggle-group {
+    color: #3D464D;
+}
+
+.toggle-group .x-form-cb-checked {
+    color: #07111c;
+    background: #bcdbea;
+}
+
+.toggle-group .x-form-radio-group {
+    background: white;
+}
+
+.toggle-group .x-form-checkboxgroup-body {
+  padding: 0px;
+}
+
+/* 
+ * FATHOM-1003
+ *
+ * Hover styling for toggle buttons.
+ */
+.toggle-group .x-form-radio-group:hover {
+  background: #226fbf;
+}
+.toggle-group .x-form-radio-group:hover .x-form-cb-label {
+  color: #fff;
+}
+
+.toggle-group .x-form-cb-checked:hover .x-form-cb-label {
+    color: #07111c;
+}
+
+.toggle-group .x-form-cb-checked:hover {
+    background: #bcdbea;
+}
+
+/* Adjust height of toggle group buttons. */
+.toggle-group .x-form-item {
+  padding-top: 2px !important;
+  padding-bottom: 1px !important;
+}
+
+/* Hide radio buttons input circle. */
+.toggle-group .x-form-radio {
+  /*
+   * Not using 'display: none;' because this prevents enter button from
+   * triggering a search immediately after a field is selected. The reason
+   * for this is that when display is none, the item that is in focus is type
+   * 'BODY' while if this technique is used to hide the radio button,
+   * document.activeElement.nodeName is 'INPUT'. If the type of the focused
+   * element is input, search triggers immediately as long as the input doesn't
+   * have a CSS class created to exclude the input from searches.
+   */
+  width: 0px;
+  height: 0px;
+}
+
+/* Remove margins between label and outer container. */
+.toggle-group .x-table-plain {
+    margin-bottom: 0px;
+  border-collapse: separate;
+}
+
+/*
+ * Prevent double sized borders in between two boxes. Requires explicitly
+ * setting border-right-width of last child to 1px.
+ */
+.toggle-group .x-table-plain td {
+  border-right-width: 0px !important;
+  border-left-width: 1px !important;
+}
+
+.toggle-group .x-table-plain tr:first-child td:first-child {
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    overflow: hidden;
+}
+
+.toggle-group .x-table-plain tr:first-child td:last-child {
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    overflow: hidden;
+
+    /*
+     * Explicity set right border for last element. Used in conjunction with
+     * code above that prevents double sized border in between boxes.
+     */
+    border-right-width: 1px !important;
+}
+
+/* Label associated with each radio button. */
+.toggle-group label {
+  /*
+   * Add symmetrical padding to labels and remove margins.
+   * Any portion within the padding is clickable allowing users to select the
+   * field.
+   */
+  margin: 0px;
+  padding: 0px 10px;
+  cursor: pointer;
+
+  /* Remove ability of users to seelcte text. */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.toggle-group .x-form-radio-group {
+    border-style: solid !important;
+    border-width: 1px !important;
+    border-color: #C1C7CD !important;
+    margin-bottom: 0px !important;
+}
+
+.toggle-group .x-form-radio-group {
+  width: fit-content !important;
+  white-space: nowrap !important;
+}
+
+.toggle-group .x-form-cb-label {
+  font-size: 14px;
+  font-weight: normal;
+  color: #07111c;
+  height: 26px !important;
+}
+
+/* Style selected toggle button. */
+.toggle-group .x-form-cb-checked {
+  background: #f3f8fc !important;
+  border: 1px solid #226fbf;
+  padding-top: 1px;
+}
+
+.help-tip {
+    position: absolute;
+    top: -2px;
+    right: 0px;
+    text-align: center;
+    background-color: #bcdbea;
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+    font-size: 11px;
+    line-height: 15px;
+    cursor: default;
+}
+
+.help-tip:before{
+    content:'?';
+    font-weight: bold;
+    color:#fff;
+}
+
+.comm-search-input-on-new-line td {
+  display: block;
+}
+
+//******************************
+//	highlighting classes for readability viewer
+//******************************
+
+.background-highlight-color-0 {
+  background-color: $oc-yellow-1;
+}
+
+.background-highlight-color-1 {
+  background-color: $oc-green-1;
+}
+
+.background-highlight-color-2 {
+  background-color: $oc-cyan-1;
+}
+
+.background-highlight-color-3 {
+  background-color: $oc-orange-1;
+}
+
+.background-highlight-color-4 {
+  background-color: $oc-blue-1;
+}
+
+.background-highlight-color-5 {
+  background-color: $oc-red-1;
+}
+
+.background-highlight-color-6 {
+  background-color: $oc-teal-1;
+}
+
+.background-highlight-color-7 {
+  background-color: $oc-grape-1;
+}
+
+.background-highlight-color-8 {
+  background-color: $oc-indigo-1;
+}
+
+.background-highlight-color-9 {
+  background-color: $oc-lime-1;
+}
+
+//******************************
+// FATHOM-1065 - Priority colours
+//******************************
+.priority-b_urg {
+  background-color: #FCE8CC !important;
+}
+
+.priority-a_imm {
+  background-color: #F9D6D6 !important;
+}
+
+//******************************
+// FATHOM-1067 - Remove blue colour and bold font-weight from Task column
+// Note for future: If situation arises where only particular column link
+// needs to be disabled (e.g. Translation Queue) then use nth-child pseudo-selector
+//******************************
+.clear-page-link-styles a, .clear-page-link-styles a:visited {
+  font-weight: normal !important;
+  color: $xcp-grid-row-cell-color !important;
+}
+
+//******************************
+// FATHOM-1062
+//******************************
+/* .inst-member-btn-search {
+ height: 22px;
+ margin: 0px 0px 0px -5px !important;
+ padding: 4px 10px 0px 10px !important;
+}*/
+
+.column-box-gentle-header .x-header-text{
+ font-family: SourceSansPro-Bold;
+ font-size: 28px;
+ color: $text-primary;
+ margin-bottom:13px;
+}
+
+.link-btn {
+  background-color: transparent;
+  padding: 0px;
+  /* Allows for better vertical alignment. */
+  margin-left: 0px !important;
+}
+
+.link-btn span {
+  color: black !important;
+  text-shadow: none !important;
+  font-weight: normal !important;
+  color: #1b6ec2 !important;
+  font: 14px SourceSansPro-Regular !important;
+}
+
+.link-btn:hover {
+  text-decoration: none;
+  color: $link-hover;
+}
+
+.link-btn.x-btn-default-small-focus {
+  border-width: 0px !important;
+  padding: 0px !important;
+}
+
+
+//******************************
+// FATHOM-1061
+//******************************
+$bwc-tab-large-height: 40px;
+
+.column-box-gentle-header {
+	margin-left: 3px;
+}
+
+.bwcf_ge_q_instmembertask .x-panel-header-xcp-column-box-ui,
+.bwcf_ge_q_instmemassistt .x-panel-header-xcp-column-box-ui,{
+  background-image: none !important;
+}
+
+.inst-member-btn-search {
+  background-color: #E8F0F8 !important;
+  color: #005aae;
+  font-size: 14px;
+  line-height: 30px;
+  border: none !important;
+  padding: 0px !important;
+  height: 30px !important;
+  width: 30px !important;
+  text-align: center;
+  margin: 0.9px 0 0 -15px !important;
+  -webkit-border-top-right-radius: 1px;
+  -webkit-border-bottom-right-radius: 1px;
+  a:focus  {
+    height: 0px;    
+  }
+  
+  &:hover {
+   background-color: rgba(6, 61, 117, 0.1) !important;
+  }
+}
+
+.inst-member-btn-clear-search {
+  background-color: #ffffff;
+  color: #7d888f;
+  line-height: 8px !important;
+  text-align: center !important;
+  width: 8px !important;
+  height: 29px !important;
+  padding: 10px 6px !important;
+  margin: 1px 5px 0 -32px !important;
+
+  &.x-btn-default-small {
+    border: none !important;
+  }
+}
+
+
+//******************************
+// Text input field
+//******************************
+.bwc-text-input input[type=text] {
+  background: #ffffff !important;
+  border: 1px solid #C1C7CD !important;
+  border-radius: 2px !important;
+  height: 32px !important;
+  width: 540px !important;
+  padding: 8px 32px 8px 8px !important;
+  font-family: SourceSansPro-Regular !important;
+  font-size: 16px !important;
+  color: rgba(5, 22, 38, 0.7) !important;
+
+  &::-webkit-input-placeholder {
+    color: rgba(5, 22, 38, 0.3);
+  }
+}
+
+//******************************
+// Result List styles
+//******************************
+.bwc-result-list {
+  box-shadow: none !important;
+  .x-column-header-inner {
+    background-color: $background-qb;
+  }
+  .x-column-header {
+    border: none !important;
+  }
+  .x-column-header-text {
+    font-family: SourceSansPro-SemiBold;
+    font-size: 16px !important;
+    color: #000 !important;
+  }
+  .x-grid-header-ct {
+    height : 35px !important;
+  }
+  .x-grid-body .x-grid-cell {
+    text-align: left;
+    font-family: SourceSansPro-Regular;
+  }
+  .x-grid-body .x-grid-cell .x-grid-cell-inner {
+    font-size: 16px !important;
+    line-height: 16px !important;
+    a {
+      font-size: 16px !important;
+      line-height: 16px !important;
+    }
+  }
+  .x-grid-body .x-grid-empty {
+    background-color: #ffffff !important;
+  }
+  .x-grid-cell,
+  .xcp-not-supported,
+  .x-grid-row .x-grid-cell-inner a {
+    color: #000 !important;
+  }
+  .x-grid-row.x-grid-data-row.x-grid-row-over td {
+    background: rgba(27, 110, 194, 0.15) !important;
+  }
+}
+
+.bwc-hide-paging-bar {
+  .xcp_pagingtoolbar-cls {
+    display: none;
+  }
+}
+//******************************
+// Result List styles -- End
+//******************************
+
+/* Case Name to appear in link color */
+.xcpid_rl_instmember_tasks_queue table td:nth-child(5),
+.xcpid_rl_recently_completed_tasks table td:nth-child(3) .xcp-not-supported {
+  color: $link-blue !important;
+}
+/* Days in Queue aligned in center*/
+.xcpid_rl_instmember_tasks_queue table td:nth-child(3) div {
+ text-align: center !important;
+}
+
+/* Compensate for the left margin being added to the results list.
+   Appears to be caused by .column-box-gentle-header class being added to
+  "Recently Completed" coloum box. Strangely enough this doesn't happen to
+  "Pending" column box.
+ */
+.xcpid_rl_recently_completed_tasks {
+  left: -4px;
+}
+
+.search-results,
+.xcpid_vd_queue_note .x-form-display-field {
+  font-family: SourceSansPro-Regular !important;
+  font-size: 14px !important;
+  color: rgba(5,22,38,0.40) !important;
+}
+
+.member-queue-title .x-form-display-field {
+  font-size: 22px !important;
+  font-family: SourceSansPro-SemiBold !important;
+  letter-spacing: 0;
+  padding: 7px 0;
+  height: $bwc-tab-large-height;
+  margin-left: 85px !important;
+  color: $color-black-8 !important;
+  border-bottom: 2px solid #059268;
+  /* Note: Adding position and z-index is *VERY* important here to get
+    expected stacking order so that full-width-bar background doesn't overlap
+    and hide the content of queue title */
+  position: inherit;
+  z-index: 1;
+}
+
+.bwcf_ge_fr_membertasks {
+  .x-panel-body-default {
+    border: none !important;
+  }
+  margin-left: 80px;
+}
+
+//***********************************
+// FATHOM-1060 - SA's My Tasks queue
+//***********************************
+.bwc-tab-large {
+  /* Hide border of tab group*/
+	div[id^="xcp_tab_group"][id$="-body"] {
+    border: none;
+  }
+	/* Hide caret below tab button */
+  .xcp-tab-bar-caret {
+    display: none;
+  }
+  .x-tab-bar-body {
+    &.x-tab-bar-body-default .x-horizontal-box-overflow-body {
+      font-family: SourceSansPro-SemiBold;
+      font-size: 20px;
+      letter-spacing: 0;
+      left: 7px;
+    }
+    height: 41px !important;
+    margin-left: 7px;
+  }
+  /* Link Color */
+  .x-tab {
+    height: $bwc-tab-large-height !important;
+    background: $background-qb !important;
+    padding: 6px 0 !important;
+    color: $color-blue-8;
+    margin-right: 12px;
+  }
+  /*  Current Link Color and Current Link Bottom border */
+  .x-active.x-tab-active {
+    color: $color-black-8 !important;
+    border-bottom: 2px solid $color-green-8;
+    border-width: 2px !important;
+  }
+  /* Link Hover Color */
+  .x-tab:hover {
+    color: $color-blue-9;
+  }
+}
+
+table.full-width-bar {
+  width: 100vw;
+  height: $bwc-tab-large-height;
+  top: 38px !important;
+  position: absolute;
+  background: $background-qb;
+}
+
+.xcpid_sa_ea_tasks .xcpid_my_task div[id^="xcp_column_box"][id$="header"] {
+  height: 49px;
+}
+
+.round-icon-button {
+  background: transparent;
+  color: #226fbf;
+  font-size: 18px;
+  padding: 0px !important;
+  left: 0px !important;
+}
+.round-icon-button:hover {
+  color: #2d5f9e;
+}
+.round-icon-button.x-btn-default-small-focus {
+  color: #23508c;
+}
+.round-icon-button .x-btn-wrap .x-btn-button .x-btn-inner{
+  height: 0px;
+  width: 0px;
+}
+
+.focused-highlight {
+  background-color: lightskyblue;
+}
+
+//**********************************
+// FATHOM-1156 - Recently Completed*
+//**********************************
+.xcpid_cb_recent_completed_filter {
+    @include columnbox-collapse-icon-align-right(255);
+}
+
+
+//**********************************************
+// FATHOM-992 - Create Search Tooltips
+//**********************************************
+
+.x-tip-default {
+  background-color: white;
+  padding: 0px;
+  border-radius: 0px;
+  border-width: 0px;
+  box-shadow: 0 1px 10px rgba(149, 165, 177, 0.4);
+}
+
+.tooltip-style-body h2 {
+  color: #2f363c;
+  font-family: SourceSansPro-Bold;
+  font-size: 16px;
+  border-bottom: 1px #ecf0f3 solid;
+  padding-bottom: 6px;
+}
+
+.tooltip-style-body {
+  padding: 6px 13px 10px 10px;
+}
+
+.tooltip-style-body * {
+  color: #2f363c;
+  font-family: SourceSansPro-Regular;
+  font-size: 14px;
+}
+
+.tooltip-style-body ul {
+  margin-left: 0px;
+  padding: 0px;
+}
+
+.tooltip-style-body p, ul, h2 {
+  -webkit-margin-before: 0px;
+  -webkit-margin-after: 0px;
+}
+
+.tooltip-style-body li {
+  list-style-type: none;
+  position: relative;
+  padding: 0px 0px 1px 8px !important;
+}
+
+.tooltip-style-body .section {
+  margin-top: 7px;
+}
+
+.tooltip-style-body .title {
+  font-family: SourceSansPro-Bold;
+}
+
+.tooltip-style-body .subtitle {
+  font-family: SourceSansPro-Bold;
+  color: #8a8a8a;
+}
+
+.tooltip-style-body ul li::before {
+  content: "\f111";
+  font-family: FontAwesome;
+  font-size: 5px;
+  position: absolute;
+  left: 0px;
+  top: 9px;
+}
+
+.x-tip-anchor-left {
+  border-right-color: white;
+}
+
+.x-tip-anchor-bottom {
+  border-top-color: white;
+  /*
+   * Hack to get arrow to be center aligned with the tooltip '?'
+   * when the tooltip window is above the '?'.
+   */
+  left: 2px !important;
+}
+
+/*Styling to the question mark icon*/
+.fa_custom
+{
+   color: #a7afb5;
+   display: inline-block;
+   font: normal normal normal 14px/1 FontAwesome !important;
+   font-size: inherit;
+   text-rendering: auto;
+   -webkit-font-smoothing: antialiased;	
+}
+
+.fa_custom:hover
+{
+  color:#1b6ec2;
+  transition-delay: 0.1s;
+}
+
+.fa-question-circle-o:before
+{
+  content: "\f059";
+}
+
+// Viewer inside ge_fr_viewDocWithoutComments fragment
+// Hide default "Viewer" title and move toolbar to center
+.viewer-without-comments .x-panel-header {
+  display: none !important;
+}
+.viewer-without-comments .rmViewerToolBar .x-box-target {
+  left: 28% !important;
+}
+
+.viewer-without-comments .rmPageGridView {
+  overflow-x: hidden !important;
+}
+
+@import "approval-task";
+@import "query-builder";
+@import "approval-draft-tab";
+@import "comments-widget";

@@ -1,0 +1,149 @@
+@import 'variables/core';
+
+//ext import
+@import 'ext-all-imports-rtl';
+
+//xcp import
+//it will override ext's mixins/varialbes if they are the same name
+$relative-image-path-for-uis:"../themes/images";
+@import 'variables';
+@import 'mixins';
+
+//ext widget mixins
+@import 'ext-all-widgets-rtl';
+
+$ext-default-theme-name: "gray";
+$relative-image-path-for-uis: "../themes/images/xcp-default";
+$relative-image-path-for-uis-ext-default-theme: "../themes/images/gray";
+
+@import 'util/messagebox';
+@import 'util/utils';
+@import 'widgets';
+@import 'util/tool';
+
+
+@include xcp-tool;
+
+@include xcp-toolbar-ui(
+        'xcp-nav-toolbar',
+
+        $background-color: $xcp-app-menu-background-color,
+        $background-gradient: $xcp-app-menu-background-gradient,
+        $border-color: $xcp-app-menu-border-color,
+        $border-radius: $xcp-app-menu-border-radius
+    );
+
+ // Need to override ext-panel-ui to fix the issue
+ // where theme-image is not using the $relative-image-path-for-uis
+ @include xcp-panel-ui(
+        'default',
+
+        $ui-base-color: $panel-base-color,
+        $ui-border-color: $panel-border-color,
+
+        $ui-header-color: $panel-header-color,
+        $ui-header-font-size: $panel-header-font-size,
+        $ui-header-font-weight: $panel-header-font-weight,
+        $ui-header-border-color: $panel-header-border-color,
+        $ui-header-background-color: $panel-header-background-color,
+        $ui-header-background-gradient: null,
+
+        $ui-body-color: $panel-body-color,
+        $ui-body-border-color: $panel-body-border-color,
+        $ui-body-border-width: 1px,
+        $ui-body-background-color: $panel-body-background-color
+    );
+
+ @include xcp-grid;
+ @include xcp-tree;
+ @include xcp-toolbar;
+
+ @include xcp-window-ui(
+    'default',
+    $xcp-dialog-border-radius,
+
+    $xcp-dialog-header-padding,
+    $xcp-dialog-header-background-color,
+    $xcp-dialog-header-background-gradient,
+
+    $xcp-dialog-background-color
+
+ );
+
+ @include xcp-all;
+ @include xcp-page;
+ @include xcp-qtip;
+ @include xcp-menu;
+ @include xcp-datetime;
+ @include xcp-boundlist;
+ @include xcp-toolbar-button;
+ @include xcp-widget-button;
+ @include xcp-facet($xcp-facet-breadcrumb-align-rtl);
+ @include xcp-master-header;
+ @include xcp-column-box;
+ @include xcp-tab-group;
+ @include xcp-form;
+ @include xcp-messagebox;
+ @include xcp-multivalue-input;
+ @include xcp-field;
+ @include xcp-comments;
+ @include xcp-image;
+ @include xcp-button;
+.#{$prefix}rtl {
+
+    .#{$prefix}tool-over {
+        .#{$prefix}tool-expand-bottom, .#{$prefix}tool-collapse-bottom {
+            background-position: -15px -105px;
+        }
+    }
+
+    .#{$prefix}tool-expand-bottom, .#{$prefix}tool-collapse-bottom {
+      background-position: 0 -105px;
+    }
+
+    .#{$prefix}panel-xcp-selected-facets {
+        .xcp-selected-facet-value{
+            right: $xcp-facet-label-padding-left;
+            left: auto;
+        }
+    }
+
+    .xcp-panel-collapse-left {
+        right: 0 !important;
+
+        .#{$prefix}tool-collapse-top, .#{$prefix}tool-expand-bottom {
+            margin-left: 5px;
+            margin-right: auto;
+        }
+    }
+
+    .#{$prefix}panel-xcp-selected-facets .xcp-selected-facet-remove-label {
+        left: auto;
+        right: 20px;
+    }
+
+    .#{$prefix}panel-xcp-simple-facet {
+        .xcp-facet-value, .xcp-simple-facet-show-more {
+            padding: 0 30px 0 0;
+        }
+    }
+}
+
+.#{$prefix}rtl {
+    .#{$prefix}menu-item-link {
+        padding: 5px 36px 5px 20px;
+    }
+
+    .xcp_nav_button-cls {
+        .#{$prefix}btn-arrow {
+            margin-right: auto;
+            margin-left: 30px;
+        }
+    }
+
+    .menu-marker-left .menu-marker-inner {
+        left: auto;
+        right: 4px;
+        transform: rotate(135deg);
+    }
+}

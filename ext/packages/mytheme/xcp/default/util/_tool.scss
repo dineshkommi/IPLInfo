@@ -1,0 +1,9 @@
+@mixin xcp-tool {
+    $background-image: none;
+    .#{$prefix}tool {
+        img {
+            $background-image: theme-image('shared/xcp-sprites.png', $relative-image-path-for-uis);
+            background-image: url($background-image);
+        }
+    }
+}

@@ -1,0 +1,457 @@
+/**
+ * FATHOM-1003 Query Builder Styling
+ */
+
+/*
+ * Assigns background color to the query builder.
+ */
+.query-builder {
+  background-color: $background-qb;
+}
+
+/**
+ * Related to Search Buttons (i.e. Load, Save, Clear)
+ */
+
+.query-builder .comm-search-button {
+  background-color: transparent;
+  padding: 0px 0px 2px 0px!important;
+  margin: 0px !important;
+}
+
+.query-builder .comm-search-button.x-btn-default-small .x-btn-inner {
+  font-size: 14px;
+  font-family: SourceSansPro-Regular !important;
+  text-shadow: none;
+  font-weight: 400;
+  color: $link-blue;
+  padding: 0 4px;
+}
+
+/* Hover state for buttons */
+.query-builder .comm-search-button.x-btn-default-small:hover .x-btn-inner {
+  color: $link-hover !important;
+}
+
+.query-builder .comm-search-button.x-btn-default-small.x-btn-disabled:hover .x-btn-inner {
+  color: #1b6ec2 !important;
+}
+
+.separator {
+  border-bottom: 1px solid rgba(9, 22, 37, .1);
+}
+
+/* Used to color the 'x' on the clear button. */
+.red-color {
+  color: red;
+}
+
+/*
+ * Removes left margin from content area.
+ */
+.xcp-content-area {
+  margin-left: 0px !important;
+}
+
+/*
+ * Remove default orange border when a button is clicked.
+ */
+.query-builder .x-btn-default-small-focus {
+  border-width: 0px !important;
+  /*Maybe not needed.*/
+  /*padding: 0px !important;*/
+}
+
+.query-builder .link-btn {
+  padding: 4px 0px 0px 0px !important;
+}
+
+/* To prevernt heart beat jump for 'Abstract' and 'General Notes'. */
+.query-builder .link-btn.x-btn-default-small-focus {
+  padding: 4px 0px 0px 0px !important;
+}
+
+/*
+ * Inputs default style.
+ */
+.query-builder input[type="text"],
+.query-builder input[type="tel"],
+.query-builder input[type="email"],
+.query-builder input[type="search"],
+.query-builder input[type="password"],
+.query-builder textarea {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  box-sizing: border-box;
+  padding: .4em .5em;
+  border: 1px solid rgba(5, 22, 38, .2);
+  border-radius: 2px 0px 0px  2px;
+  background: #fff;
+  border-radius: 2px;
+  outline: none;
+  color: #07111c;
+  font-family: SourceSansPro-Regular;
+  font-size: 16px !important;
+  line-height: 19px;
+  height: 32px;
+  width: 100%;
+  margin: 0;
+}
+
+/*
+ * Input active/focus styles.
+ */
+.query-builder input[type="text"]:focus,
+.query-builder input[type="text"]:active,
+.query-builder input[type="tel"]:focus,
+.query-builder input[type="tel"]:active,
+.query-builder input[type="email"]:focus,
+.query-builder input[type="email"]:active,
+.query-builder input[type="search"]:focus,
+.query-builder input[type="search"]:active,
+.query-builder input[type="password"]:focus,
+.query-builder input[type="password"]:active,
+.query-builder textarea:focus,
+.query-builder textarea:active {
+  border-color: $link-blue;
+}
+
+/* Place red border around invalid input fields. */
+.query-builder .x-form-invalid-field {
+  border-color: #e03131 !important;
+}
+
+/* Font style for error messages. */
+.query-builder .x-form-invalid-under {
+  font: 12px "SourceSansPro-Regular" !important;
+  line-height: 15px;
+  color: rgba(7, 17, 28, .7);
+}
+
+.query-builder .x-form-invalid-under {
+  background: unset;
+  background-image: unset;
+}
+
+.query-builder .x-form-invalid-under:before {
+    content: "\f05a";  /* this is your text. You can also use UTF-8 character codes as I do here */
+    color: #e03131;
+    font-family: FontAwesome;
+    position:absolute;
+    left: 4px;
+    top: 36px;
+ }
+
+/**
+ * Set border color to green for input field that is not in focus.
+ * This indicates that the input is correct. If the input is incorrect
+ * the border is color red with a specific selector that uses the
+ * x-form-invlid-field class.
+ */
+.query-builder .date-input.x-form-dirty input[type="text"]:not(:focus) {
+  border-color: #099268;
+}
+
+/**
+ * Search Button Styling
+ */
+
+/* Search button in the query builder. */
+.query-builder .inst-member-btn-search {
+  margin: 0px 0px 0px 0px !important;
+  width: 32px !important;
+  height: 32px !important;
+  background-color: $link-blue !important;
+  border-radius: 0 2px 2px 0;
+  color: #fff;
+}
+
+.query-builder .inst-member-btn-search.x-btn-default-small-disabled {
+  color: #ffffff;
+  background-color: #d7d7d7 !important;
+}
+
+.query-builder .inst-member-btn-search:hover.x-btn-default-small-disabled {
+  color: #ffffff;
+  background-color: #d7d7d7 !important;
+  cursor: default;
+}
+
+/* Prevent the button from jumping up and out of the row. */
+.query-builder .inst-member-btn-search .x-btn-wrap .x-btn-button .x-btn-inner {
+  height: 0px;
+  width: 0px;
+}
+
+/* Hover state for search button. */
+.query-builder .inst-member-btn-search:hover {
+  background: #145da6 !important;
+  border-color: #145da6 !important;
+}
+
+/**
+ * Styling for Dropdown Lists in the Query Builder.
+ */
+
+.query-builder .x-trigger-cell + .x-trigger-cell {
+  width: 32px !important;
+}
+
+/* Removes original background image. */
+.query-builder .x-form-trigger {
+  display:inline-block;
+  background: none;
+  border-bottom-width: 0px;
+}
+
+.query-builder .x-trigger-cell {
+  background-color: transparent;
+}
+
+.query-builder .x-form-arrow-trigger::before {
+    content: "\f107";
+    font-family: 'FontAwesome';
+    height: 23px;
+    width: 21px;
+    font-size: 17px;
+    position: absolute;
+    padding: 7px 0px 0px 10px;
+}
+
+/* Change the drop down icon to an angle up when the picker is opened. */
+.query-builder .x-pickerfield-open .x-form-arrow-trigger::before {
+  content: "\f106"
+}
+
+.query-builder .x-form-clear-trigger::before {
+    content: "\f00d";
+    font-family: 'FontAwesome';
+    height: 22px;
+    width: 13px;
+    font-size: 13px;
+    position: absolute;
+    padding: 0px;
+    padding-left: 3px;
+    padding-top: 8px;
+    margin-left: 0px;
+    color: rgba(7, 17, 28, .5);
+    background: white;
+}
+
+.query-builder .x-form-clear-trigger:hover::before {
+  color: #1857b5;
+}
+
+/* Set border for the arrow button in drop down list.*/
+.query-builder .x-trigger-cell {
+  border-color: #cdd0d4;
+  border-style: solid;
+  border-width: 1px 1px 1px 0px;
+}
+
+.query-builder .x-boundlist-item {
+  font: 16px SourceSansPro-Regular;
+  font-weight: 400;
+  line-height: 29px;
+  background: #fff;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.query-builder .x-boundlist-item-over {
+  color: #07111c;
+  background: rgba(5, 22, 38, .05);
+}
+
+/** 
+ * Option List Styling
+ */
+
+.option-list .x-field-label-cell {
+  width: 162px !important;
+}
+
+.option-list input[type="text"] {
+  height: 12px !important;
+  background-color: transparent !important;
+  border-width: 0px !important;
+  font-family: SourceSansPro-Bold;
+  font-size: 11px !important;
+}
+
+.option-list .x-trigger-cell {
+  background-color: transparent;
+  vertical-align: middle;
+  border: none !important;
+}
+
+.option-list .x-form-trigger.x-form-arrow-trigger {
+  background: none;
+  width: 10px !important;
+  height: 10px !important;
+  border-bottom-width: 0px;
+}
+
+.option-list .x-form-arrow-trigger::before {
+  content: "\f107";
+  font-family: 'FontAwesome';
+  font-size: 14px;
+  color: #7f8992;
+  position: absolute;
+  margin-top: -2px;
+  padding: 0px !important;
+}
+
+.option-list .x-form-trigger-input-cell {
+  width: 10px;
+}
+
+/* Rounded corners. */
+.option-list {
+  border-radius: 2px;
+}
+
+.option-list .x-boundlist-item {
+  color: #07111c;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+  height: 10px !important;
+  /* Vertically aligns the text to middle. */
+  padding-top: 3px !important;
+}
+
+.option-list .x-boundlist-item {
+  font: 11px SourceSansPro-Bold;
+  line-height: 12px;
+  background: #fff;
+}
+
+.option-list .x-boundlist-selected {
+  display: none;
+}
+
+.option-list .x-boundlist-item-over {
+  background: white;
+}
+
+.option-list .x-pickerfield-open input[type="text"] {
+  color: #07111c !important;
+}
+
+.option-list .x-boundlist-item:hover {
+  color: #1857b5;
+}
+
+.option-list .x-form-field {
+  color: #7f8992 !important;
+}
+
+/** Show pointer pointer when hovering over label. */
+.option-list .x-form-field {
+  cursor: pointer;
+}
+
+.option-list .x-boundlist-selected {
+  display: none;
+}
+
+/* Set width for down angle for option lists. */
+.option-list .x-trigger-cell + .x-trigger-cell{
+  width: 10px !important;
+}
+
+.query-builder .x-tool {
+  left: auto !important;
+  right: 10px !important;
+}
+
+.query-builder .x-tool-img {
+  width: 13px;
+  height: 13px;
+}
+
+.query-builder .x-tool-collapse-top {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANBAMAAACAxflPAAAAJFBMVEUAAAAFFiYFFiYFFiYFFiYFFiYFFiYFFiYFFiYFFiYFFiYFFiamhgyRAAAAC3RSTlMAECw1OD4/cIOIjAbLcQsAAAAuSURBVAhbY2DACTgcIFKrt4Aprq2rwQKrHbhAAiACJDAbiLk2MTAkg+QKcRoGAMpaCQ+bONd4AAAAAElFTkSuQmCC) !important;
+}
+
+.query-builder .x-box-inner .x-tool-expand-bottom {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANBAMAAACAxflPAAAAIVBMVEUAAAAFFiYFFiYFFiYFFiYFFiYFFiYFFiYFFiYFFiYFFib1/YJ5AAAAC3RSTlMAAgMJDxhKubzI8zMIGV8AAAAySURBVAhbY2BAA4ogwoCBoUKBgYF1GQNDVBMEs65QACIGEAfEBQqsBHMhsiDAAuFiBwAPyAkVtabb9QAAAABJRU5ErkJggg==) !important;
+}
+
+/* Section headers - for example, 'Other Criteria' */
+.query-builder .x-header-text {
+  font-family: SourceSansPro-Bold;
+  font-size: 16px;
+}
+
+/* Aligns header text to the left most position in the container. */
+.query-builder .x-header-text-container {
+  left: 0px !important;
+}
+
+/* Remove header image. */
+.query-builder .x-panel-header-xcp-column-box-ui {
+  background-image: none !important;
+}
+
+.corrections input[type="text"] {
+  width: 50px !important;
+}
+
+.corrections .x-form-trigger-wrap {
+  width: 80px !important;
+}
+
+.query-builder .x-btn-default-small, .xcp_action_menu-cls {
+  padding: 4px;
+}
+
+.label {
+  font: 14px/1.2 SourceSansPro-Bold !important;
+}
+
+/* To grey out buttons when inactive. */
+.query-builder .x-btn-default-small-disabled {
+  color: #d7d7d7;
+}
+.query-builder .round-icon-button:hover.x-btn-default-small-disabled {
+  color: #d7d7d7;
+  cursor: default;
+}
+
+/*
+ * Required to make sure that scroll bar in query builder is completely to 
+ * the right hand side.
+ */
+.cb_search_criteria {
+  width: 295px !important;
+}
+.cb_search_criteria > .x-panel-body {
+  width: 295px !important;
+}
+.cb_search_criteria > .x-panel-body > .x-box-inner {
+  width: 295px !important;
+}
+
+/* Top paddings for headers in the communication search screen. */
+.legacy-data-cb .x-panel-header-xcp-column-box-ui {
+  padding-top: 20px !important;
+}
+
+.related-communications-cb .x-panel-header-xcp-column-box-ui {
+  padding-top: 10px !important;
+}
+
+.distribution-cb .x-panel-header-xcp-column-box-ui {
+  padding-top: 20px !important;
+}
+
+.corrections-cb .x-panel-header-xcp-column-box-ui {
+  padding-top: 8px !important;
+}
+
+/* Used to draw line under Load/Save/Clear buttons. */
+.border-bottom-column {
+  border-bottom: 1px solid rgba(9, 22, 37, .1);
+}
