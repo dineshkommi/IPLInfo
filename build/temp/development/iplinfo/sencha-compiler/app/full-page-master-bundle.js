@@ -1,2 +1,2 @@
 // @tag full-page
-// @require /Users/hariprasad/Workspace/iplinfo/app.js
+// @require C:\Users\Premalatha\Desktop\IPLInfo\app.js

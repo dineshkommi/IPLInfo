@@ -14,8 +14,12 @@ Ext.define('iplinfo.view.main.Main', {
         'Ext.window.MessageBox',
 
         'iplinfo.view.main.MainController',
-        'iplinfo.view.main.MainModel',
-        'iplinfo.view.main.List'
+        'iplinfo.view.main.MainModel',  
+        'iplinfo.view.main.List',
+        'iplinfo.view.seasons.SeasonsView',
+        'iplinfo.view.points.PointsView',
+        "iplinfo.view.playersinfo.PlayersInfoView"
+        
     ],
 
     controller: 'main',
@@ -83,22 +87,33 @@ Ext.define('iplinfo.view.main.Main', {
             xtype: 'mainlist'
         }]
     }, {
-        title: 'Users',
+        title: 'Seasons',
         iconCls: 'fa-user',
-        bind: {
-            html: '{loremIpsum}'
-        }
+        items:[{
+            xtype:"seasonsview"
+        }]
     }, {
-        title: 'Groups',
+        title: 'PointsTable',
         iconCls: 'fa-users',
-        bind: {
-            html: '{loremIpsum}'
-        }
+       // layout:"border",
+        items:[{
+            xtype:"pointsview",
+           //  region:"center",
+          
+
+        // },{
+        //     xtype:"button",
+        //     text:"Csdfsdf",
+        //     region:"east",
+        //     height:400,
+        //     width:400
+        // }
+        }]
     }, {
-        title: 'Settings',
-        iconCls: 'fa-cog',
-        bind: {
-            html: '{loremIpsum}'
+        title: 'Players Information',
+        iconCls: 'fa-users',
+        items: {
+            xtype: 'playersinfoview'
         }
     }]
 });

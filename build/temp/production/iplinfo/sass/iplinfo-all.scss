@@ -1,5 +1,5 @@
 $app-name:  dynamic( 'iplinfo' );
-$image-search-path: '/Users/hariprasad/Workspace/iplinfo/build/production/iplinfo/modern/resources';
+$image-search-path: 'C:/Users/Premalatha/Desktop/IPLInfo/build/production/iplinfo/modern/resources';
 $theme-name:  dynamic( 'theme-material' );
 $include-ext-abstractcomponent: dynamic(false);;
 $include-ext-abstractmanager: dynamic(false);;
@@ -632,6 +632,9 @@ $include-ext-viewport-wp: dynamic(true);;
 $include-ext-viewport-windowsphone: dynamic(true);;
 $include-iplinfo-application: dynamic(true);;
 $include-iplinfo-store-personnel: dynamic(true);;
+$include-iplinfo-store-playersinfostore: dynamic(false);;
+$include-iplinfo-store-pointstablestore: dynamic(false);;
+$include-iplinfo-store-seasonsstore: dynamic(false);;
 $include-iplinfo-view-main-list: dynamic(true);;
 $include-iplinfo-view-main-main: dynamic(true);;
 $include-iplinfo-view-main-maincontroller: dynamic(true);;
