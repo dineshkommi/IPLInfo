@@ -3,12 +3,10 @@ Ext.define("iplinfo.view.playersinfo.PlayersInfoView",
     extend:"Ext.grid.Panel",
     xtype:"playersinfoview",
     maxHeight:800,
-    maxWidth:800,
+    width:800,
     requires: [
       "iplinfo.store.PlayersInfoStore"
     ],
-
-      title: 'Indian Premier League Players Information',
 
     store: {
         type: 'playersinfostore'
@@ -38,12 +36,17 @@ Ext.define("iplinfo.view.playersinfo.PlayersInfoView",
             dataIndex: "teamName",
             align:"center",
             flex:1,
-           // hidden: true
+            hidden: true
         }
     ],  
     features:[{
         text:"teamName",
         ftype:"grouping",
         hideGroupedHeader: true,
-    }]
+    }],
+    listeners: [
+        {
+            select: 'playersinfo'
+        }
+    ]
 })

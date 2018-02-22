@@ -1,1 +1,1 @@
-cache_path = 'C:\Users\Premalatha\Desktop\IPLInfo/build/.sass-cache'
+cache_path = 'D:\IPL Project/build/.sass-cache'

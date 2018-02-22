@@ -14,12 +14,14 @@ Ext.define('iplinfo.view.main.Main', {
         'Ext.window.MessageBox',
 
         'iplinfo.view.main.MainController',
-        'iplinfo.view.main.MainModel',  
+        'iplinfo.view.main.MainModel',
         'iplinfo.view.main.List',
         'iplinfo.view.seasons.SeasonsView',
         'iplinfo.view.points.PointsView',
-        "iplinfo.view.playersinfo.PlayersInfoView"
-        
+        "iplinfo.view.playersinfo.PlayersInfoView",
+        "iplinfo.batting.BattingStat",
+        'iplinfo.view.matches.Matches'
+
     ],
 
     controller: 'main',
@@ -49,6 +51,7 @@ Ext.define('iplinfo.view.main.Main', {
         layout: {
             align: 'stretch',
             overflowHandler: 'none'
+        
         }
     },
 
@@ -83,37 +86,140 @@ Ext.define('iplinfo.view.main.Main', {
         title: 'Home',
         iconCls: 'fa-home',
         // The following grid shares a store with the classic version's grid as well!
+        // layout:"border",
+        // region:"center",
         items: [{
-            xtype: 'mainlist'
+            xtype:"panel",
+            title:"IPL",
+            html:"<img src='http://im.rediff.com/cricket/2015/mar/31ipl-trophy.jpg'>",
+            width:700
         }]
     }, {
+        title: 'Charts',
+        iconCls: 'fa-user',
+        items: [{   
+            xtype: "basic-pie"
+            
+        }]
+    },{
         title: 'Seasons',
         iconCls: 'fa-user',
-        items:[{
-            xtype:"seasonsview"
-        }]
+        layout:"border",
+        items: [{
+            xtype: "seasonsview",
+            region:"center"
+        },
+    {
+        xtype:"panel",
+        region:"east",
+        name:"barpanel"
+    }]
     }, {
         title: 'PointsTable',
-        iconCls: 'fa-users',
-       // layout:"border",
-        items:[{
-            xtype:"pointsview",
-           //  region:"center",
-          
-
-        // },{
-        //     xtype:"button",
-        //     text:"Csdfsdf",
-        //     region:"east",
-        //     height:400,
-        //     width:400
-        // }
+        iconCls: 'fa-table',
+        items: [{
+            xtype: "pointsview"
         }]
     }, {
         title: 'Players Information',
+        iconCls: 'fa-info',
+        xtype:"panel",
+        layout:"border",
+        region:"center",
+        items: [{
+            xtype:"panel",
+            title:'Indian Premier League Players Information',
+            items:[{
+                region:"center",
+                width:900,
+                xtype: 'playersinfoview'
+            }]
+        },{
+            region:"east",
+            title:"Player Information",
+            height:0,
+            width:200,
+            margin:"80 80 100 100",
+            name:"playerinformation"
+        }]
+    }, {
+        title: "Stats",
+        iconCls: 'fa-user',
+        layout: "border",
+        items: [{
+            xtype: "panel",
+            title: "Indian Premier League Seasons Statistics",
+            region: "north",
+            items: [{
+                xtype: "button",
+                widht: 200,
+                margin: "20 20 20 20",
+                text: "Batting",
+                menu: [{
+                    text: "Most Runs",
+                    handler: 'onclickFun'
+                }, {
+                    text: "Most Fifites",
+                    handler: "onclickFun"
+                }, {
+                    text: "Most Centuries",
+                    handler: "onclickFun"
+                }, {
+                    text: "Most Sixes",
+                    handler: "onclickFun"
+                }, {
+                    text: "Highest Stike Rate",
+                    handler: "onclickFun"
+                }, {
+                    text: "Most Fours",
+                    handler: "onclickFun"
+                }]
+            },
+            {
+                xtype: "button",
+                widht: 200,
+                margin: "20 20 20 20",
+                text: "Bowling"
+            }]
+        }, {
+            xtype: "panel",
+            name: 'batpanel',
+            region: "center",
+        }, {
+            xtype: "panel",
+            name: "playerinfo",
+            region: "south",
+            height: 50,
+            width: 100,
+            margin:"20"
+        }]
+    }, {
+        title: 'Matches',
         iconCls: 'fa-users',
-        items: {
-            xtype: 'playersinfoview'
-        }
+        height:300,
+        width:400,
+        items: [{
+            xtype: "matchesview"
+        }]
+
+    }, {
+        title: "Search",
+        iconCls: "fa-search",
+        //layout:"border",
+        items: [{
+            xtype: "textfield",
+            fieldLabel: "PlayerSearch",
+            name: "player"
+        }, {
+            xtype: "button",
+            text: "Search",
+            handler: "searchPlayer"
+        }, {
+            layout: "border",
+            region: "center",
+            height: 800,
+            width: 1000,
+            name: "searchcenter"
+        }]
     }]
 });
