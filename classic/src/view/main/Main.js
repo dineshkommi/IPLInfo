@@ -112,7 +112,22 @@ Ext.define('iplinfo.view.main.Main', {
     {
         xtype:"panel",
         region:"east",
-        name:"barpanel"
+        name:"barpanel",
+        items :[{
+            xtype:"button",
+            text:"chart",
+            menu:[
+                {
+                    text:"bar"
+                },
+                {
+                    text:"Pie"
+                },
+                {
+                    text:"line"
+                }
+            ]
+        }]
     }]
     }, {
         title: 'PointsTable',
