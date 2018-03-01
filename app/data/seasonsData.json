@@ -1,0 +1,63 @@
+{
+    "seasons":[{
+        "season":"1",
+        "winner":"RR",
+        "runner":"CSK",
+        "result":"won by 3 wickets",
+        "player":"Shane Watson"
+    },{
+        "season":"2",
+        "winner":"DC",
+        "runner":"RCB",
+        "result":"won by 6 runs",
+        "player":"Adam Gilchrist"
+    },{
+        "season":"3",
+        "winner":"CSK",
+        "runner":"MI",
+        "result":"won by 22 runs",
+        "player":"Sachin Tendulkar"
+    },{
+        "season":"4",
+        "winner":"CSK",
+        "runner":"RCB",
+        "result":"won by 58 runs",
+        "player":"Chris Gayle"
+    },{
+        "season":"5",
+        "winner":"KKR",
+        "runner":"CSK",
+        "result":"won by 5 wickets",
+        "player":"Sunil Narine"
+    },{
+        "season":"6",
+        "winner":"MI",
+        "runner":"CSK",
+        "result":"won by 23 runs",
+        "player":"Shane Watson"
+    },{
+        "season":"7",
+        "winner":"kkr",
+        "runner":"KXIP",
+        "result":"won by 3 wickets",
+        "player":"Glenn Maxwell"
+    },{
+        "season":"8",
+        "winner":"MI",
+        "runner":"CSK",
+        "result":"won by 41 runs",
+        "player":"Andrew Russell"
+    },{
+        "season":"9",
+        "winner":"SRH",
+        "runner":"RCB",
+        "result":"won by 8 runs",
+        "player":"Virat Kohli"
+    },{
+        "season":"10",
+        "winner":"MI",
+        "runner":"RPS",
+        "result":"won by 1 runs",
+        "player":"Ben Stokes"
+    }]
+}

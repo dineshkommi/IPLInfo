@@ -1,26 +1,21 @@
-/**
- * This view is an example list of people.
- */
 Ext.define('iplinfo.view.main.List', {
     extend: 'Ext.grid.Panel',
     xtype: 'mainlist',
+    width: 700,
 
     requires: [
         'iplinfo.store.Personnel'
     ],
 
-    title: 'Personnel',
+    title: 'IPL TEAMS',
 
     store: {
         type: 'personnel'
     },
 
     columns: [
-        { text: 'Name',  dataIndex: 'name' },
-        { text: 'Email', dataIndex: 'email', flex: 1 },
-        { text: 'Phone', dataIndex: 'phone', flex: 1 }
+        { text: 'TEAMS', dataIndex: 'Teams', flex: 1, align: 'left' },
     ],
-
     listeners: {
         select: 'onItemSelected'
     }

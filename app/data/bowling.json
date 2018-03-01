@@ -1,0 +1,31 @@
+{
+    "bowling":[
+        {"tn":"csk", "name": "dwayen brawo ","mat":"17","inng":"16","over":"52.2","run":"426","wkt":"26","bbi":"3/22","avg":"16.38","eco":"8.14","sr":"12.07","4w":"0","5w":"0"},
+        {"tn":"mi", "name": "lasith malinga ","mat":"15","inng":"15","over":"60.0","run":"444","wkt":"24","bbi":"4/23","avg":"18.50","eco":"7.40","sr":"15","4w":"1","5w":"0"},
+        {"tn":"rcb", "name": "yuzvendra chahal","mat":"15","inng":"14","over":"46.5","run":"415","wkt":"23","bbi":"3/14","avg":"18.04","eco":"8.86","sr":"","4w":"0","5w":"0"},
+        {"tn":"csk", "name": "ashish nehra","mat":"16","inng":"16","over":"62.0","run":"449","wkt":"22","bbi":"4/10","avg":"20.40","eco":"7.24","sr":"16.90","4w":"1","5w":"0"},
+        {"tn":"rcb", "name": "mitchell starc","mat":"13","inng":"12","over":"43.0","run":"291","wkt":"20","bbi":"4/15","avg":"14.55","eco":"6.76","sr":"12.90","4w":"1","5w":"0"},
+        {"tn":"mi", "name": "harbhajan singh","mat":"15","inng":"15","over":"57.0","run":"446","wkt":"18","bbi":"3/27","avg":"24.77","eco":"7.82","sr":"19.00","4w":"0","5w":"0"},
+        {"tn":"srh", "name": "bhuvneshwar kumar","mat":"14","inng":"14","over":"51.4","run":"407","wkt":"18","bbi":"3/26","avg":"22.61","eco":"7.87","sr":"17.22","4w":"0","5w":"0"},
+        {"tn":"mi", "name": "mitchell McClenaghan","mat":"12","inng":"12","over":"47","run":"386","wkt":"18","bbi":"3/16","avg":"21.44","eco":"8.21","sr":"15.16","4w":"0","5w":"0"},
+        {"tn":"rcb", "name": "harshal patel","mat":"15","inng":"14","over":"43.5","run":"328","wkt":"17","bbi":"2/12","avg":"19.38","eco":"7.29","sr":"15.47","4w":"0","5w":"0"},
+        {"tn":"rcb", "name": "david wiese","mat":"14","inng":"13","over":"42.2","run":"353","wkt":"16","bbi":"4/33","avg":"22.06","eco":"8.33","sr":"15.87","4w":"1","5w":"0"},
+        {"tn":"dd", "name": "nathan coulter-Nile","mat":"11","inng":"11","over":"42.3","run":"321","wkt":"15","bbi":"4/20","avg":"21.40","eco":"7.55","sr":"17.00","4w":"1","5w":"0"},
+        {"tn":"dd", "name": "imran tahir","mat":"10","inng":"10","over":"35.3","run":"314","wkt":"15","bbi":"4/28","avg":"20.93","eco":"8.84","sr":"14.20","4w":"1","5w":"0"},
+        {"tn":"kXIp", "name": "anureet singh","mat":"14","inng":"14","over":"51.4","run":"465","wkt":"15","bbi":"3/23","avg":"31.00","eco":"9.00","sr":"20.66","4w":"0","5w":"0"},
+        {"tn":"kkr", "name": "andre russell","mat":"13","inng":"13","over":"40.4","run":"324","wkt":"14","bbi":"3/32","avg":"23.14","eco":"7.96","sr":"17.42","4w":"0","5w":"0"},
+        {"tn":"csk", "name": "mohit sharma","mat":"16","inng":"16","over":"57.0","run":"481","wkt":"14","bbi":"3/25","avg":"34.35","eco":"8.43","sr":"24.42","4w":"0","5w":"0"},
+        {"tn":"kXIp", "name": "sandeep sharma","mat":"14","inng":"14","over":"50.0","run":"350","wkt":"13","bbi":"4/25","avg":"26.92","eco":"7.0","sr":"23.07","4w":"1","5w":"0"},
+        {"tn":"rr", "name": "chris morris","mat":"11","inng":"11","over":"42.0","run":"311","wkt":"13","bbi":"4/23","avg":"23.92","eco":"7.40","sr":"19.38","4w":"1","5w":"0"},
+        {"tn":"rr", "name": "dhawal kulkarni","mat":"11","inng":"11","over":"35.0","run":"277","wkt":"13","bbi":"2/9","avg":"21.30","eco":"7.91","sr":"16.13","4w":"0","5w":"0"},
+        {"tn":"kXIp", "name": "axar patel","mat":"14","inng":"14","over":"46.4","run":"329","wkt":"13","bbi":"2/11","avg":"30.15","eco":"8.40","sr":"21.53","4w":"0","5w":"0"},
+        {"tn":"srh", "name": "moises henriques","mat":"9","inng":"9","over":"25","run":"158","wkt":"11","bbi":"3/16","avg":"14.36","eco":"6.32","sr":"13.63","4w":"0","5w":"0"},
+        {"tn":"csk", "name": "ishwar pandey","mat":"10","inng":"10","over":"31.0","run":"223","wkt":"11","bbi":"2/27","avg":"20.27","eco":"7.19","sr":"16.90","4w":"0","5w":"0"},
+        {"tn":"kkr", "name": "piyush chawla","mat":"13","inng":"13","over":"35","run":"269","wkt":"11","bbi":"4/32","avg":"24.45","eco":"7.68","sr":"19.09","4w":"1","5w":"0"},
+        {"tn":"csk", "name": "ravindra jadeja","mat":"17","inng":"15","over":"42.4","run":"330","wkt":"11","bbi":"4/11","avg":"30.00","eco":"7.73","sr":"23.27","4w":"1","5w":"0"},
+        {"tn":"csk", "name": "ravichandran ashwin","mat":"14","inng":"13","over":"39.0","run":"228","wkt":"10","bbi":"2/5","avg":"22.80","eco":"5.84","sr":"23.40","4w":"0","5w":"0"},
+        {"tn":"kkr", "name": "morne morkel","mat":"7","inng":"7","over":"28","run":"206","wkt":"10","bbi":"2/18","avg":"20.60","eco":"7.35","sr":"16.80","4w":"0","5w":"0"},
+        {"tn":"srh", "name": "karn sharma","mat":"14","inng":"14","over":"39.5","run":"332","wkt":"10","bbi":"2/12","avg":"33.20","eco":"8.33","sr":"23.90","4w":"0","5w":"0"},
+        {"tn":"", "name": "","mat":"","inng":"","over":"","run":"","wkt":"","bbi":"","avg":"","eco":"","sr":"","4w":"0","5w":"0"}
+    ]
+}
