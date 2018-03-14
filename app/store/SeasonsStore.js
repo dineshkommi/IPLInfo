@@ -2,7 +2,7 @@ Ext.define('iplinfo.store.SeasonsStore', {
     extend: 'Ext.data.Store',
 
     alias: 'store.seasonsstore',
-    
+    storeId:"seasonstore",  
     fields: [
         'season', 'winner','runner','result','player'
     ],

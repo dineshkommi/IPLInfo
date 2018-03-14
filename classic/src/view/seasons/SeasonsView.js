@@ -4,13 +4,20 @@
 Ext.define('iplinfo.view.seasons.SeasonsView', {
     extend: 'Ext.grid.Panel',
     xtype: 'seasonsview',
-     maxHeight:800,
-     maxWidth:800,
+    maxHeight:800,
+    maxWidth:800,
+    //  items:
+    //     {
+    //         xtype : "panel",
+    //         name :"barpanel",
+    //         align:"east"
+    //     },     
     requires: [
         "iplinfo.store.SeasonsStore"
     ],
 
-    title: 'Indian Premier League Seasons',align:"center",
+    title: 'Indian Premier League Seasons',
+    align:"center",
 
     store: {
         type: 'seasonsstore'
