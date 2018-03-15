@@ -15,7 +15,11 @@ Ext.define('iplinfo.view.main.Main', {
 
         'iplinfo.view.main.MainController',
         'iplinfo.view.main.MainModel',
-        'iplinfo.view.main.List'
+        // 'iplinfo.view.main.List',
+        'iplinfo.view.seasons.SeasonsView',
+        'iplinfo.view.points.PointsView',
+        "iplinfo.view.playersinfo.PlayersInfoView",
+       
     ],
 
     controller: 'main',
@@ -77,28 +81,90 @@ Ext.define('iplinfo.view.main.Main', {
 
     items: [{
         title: 'Home',
-        iconCls: 'fa-home',
-        // The following grid shares a store with the classic version's grid as well!
+        iconCls: 'fa-users',
         items: [{
-            xtype: 'mainlist'
+            xtype: "playersinfomain"
+        }]
+    },
+    {
+        title: 'Seasons',
+        iconCls: 'fa-user',
+        layout: "border",
+        items: [{
+            xtype: "seasonsview",
+            region: "center",
+            width: 600
+        }, {
+            xtype: "panel",
+            region: "east",
+            name: "barpanel",
+            width: 400,
+            items: [{
+                region: "north",
+                text: "chart",
+                xtype: "mydropdown",
+                menu: [{
+                    text: "bar",
+                    handler: "myChart"
+                }, {
+                    text: "pie",
+                    handler: "myChart"
+                }, {
+                    text: "line",
+                    handler: "myChart"
+                }]
+            }, {
+                xtype: "panel",
+                region: "center",
+                name: "chartcenter",
+                title: "Chart View"
+            }]
+        }]
+    },
+
+    {
+        title: 'Matches',
+        iconCls: 'fa-user',
+        items: [{
+            xtype: "app-matchmain"
+        }]
+    },
+    {
+        title: 'Charts',
+        iconCls: 'fa-table',
+
+        items: [{
+            xtype: "chartsview"
+        }]
+    },
+
+    {
+        title: 'PointsTable',
+        iconCls: 'fa-users',
+        // layout:"border",
+        items: [{
+            xtype: "pointsview",
+
         }]
     }, {
-        title: 'Users',
-        iconCls: 'fa-user',
-        bind: {
-            html: '{loremIpsum}'
+        title: 'Players Information',
+        iconCls: 'fa-info',
+        items: {
+            xtype: 'playersinfoview'
         }
     }, {
-        title: 'Groups',
-        iconCls: 'fa-users',
-        bind: {
-            html: '{loremIpsum}'
-        }
+        title: 'Player Stats',
+        iconCls: 'fa-table',
+        items: [{
+            xtype: "batbowlmain"
+        }]
     }, {
-        title: 'Settings',
-        iconCls: 'fa-cog',
-        bind: {
-            html: '{loremIpsum}'
-        }
+        title: "Search",
+        iconCls: "fa-search",
+        layout: "border",
+        region: "center",
+        items: [{
+            xtype: 'searchmain'
+        }]
     }]
 });
