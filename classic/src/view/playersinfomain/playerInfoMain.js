@@ -3,48 +3,61 @@ Ext.define("iplinfo.view.playersinfomain.playerinfoMain",
     extend:"Ext.panel.Panel",
     xtype:"playersinfomain",
     controller:"playerInfoController",
+   
     items: [{
         xtype: 'panel',
         title: 'TEAMS',
         name: 'teamPanel',
-        defaults: {
-            xtype: 'button',
-            },
+        width:1040,       
+        
         items: [{
             text: 'RR',
             xtype: 'button',
-            handler: 'teamhandler'
+            width:130,
+            handler: 'teamhandler',
+            
         }, {
             xtype: 'button',
-            text: 'CSk',
-            handler: 'teamhandler'
+            text: 'CSK',
+            handler: 'teamhandler',
+            width:130
         }, {
             xtype: 'button',
             text: 'RCB',
-            handler: 'teamhandler'
+            handler: 'teamhandler',
+            width:130
         }, {
             xtype: 'button',
             text: 'DD',
-            handler: 'teamhandler'
+            handler: 'teamhandler',
+            width:130
         }, {
             xtype: 'button',
             text: 'SRH',
-            handler: 'teamhandler'
+            handler: 'teamhandler',
+            width:130
         }, {
             xtype: 'button',
             text: 'KKR',
-            handler: 'teamhandler'
+            handler: 'teamhandler',
+            width:130
         }, {
             xtype: 'button',
             text: 'KXIP',
-            handler: 'teamhandler'
+            handler: 'teamhandler',
+            width:130
         }, {
             xtype: 'button',
             text: 'MI',
-            handler: 'teamhandler'
+            handler: 'teamhandler',
+            width:130
         }, {
             xtype: "panel",
             name: "teamInfoPanel",
+            layout:"fit",
+            height:500,                        
+            flex:1
+            
 
         }]
     }]

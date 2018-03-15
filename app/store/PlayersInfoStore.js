@@ -15,6 +15,9 @@ Ext.define('iplinfo.store.PlayersInfoStore', {
         },
         {
             name:"teamName"
+        },
+        {
+            name:"image"
         }
     ],
     proxy: {

@@ -1,6 +1,6 @@
 Ext.define('iplinfo.view.playerinfocontroller.playerInfoController', {
     extend: 'Ext.app.ViewController',
-    alias:"controller.playerInfoController",
+    alias: "controller.playerInfoController",
     teamhandler: function (me) {
         // console.log("button clicked")
         var team = Ext.ComponentQuery.query("[name=teamInfoPanel]")[0]
@@ -17,4 +17,6 @@ Ext.define('iplinfo.view.playerinfocontroller.playerInfoController', {
         team.removeAll();
         team.add(myGrid);
     },
+
+    
 })    

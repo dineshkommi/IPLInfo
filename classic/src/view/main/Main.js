@@ -126,7 +126,7 @@ Ext.define('iplinfo.view.main.Main', {
         title: 'Matches',
         iconCls: 'fa-user',
         items: [{
-            xtype: "matchview"
+            xtype: "app-matchmain"
         }]
     },
     {

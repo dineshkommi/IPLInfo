@@ -34,7 +34,7 @@ Ext.define('iplinfo.view.searchcontroller.searchController', {
                     if (playerData.name == batting.player) {
                         battingInfo = batting;
                         
-                        var myHtml = "<b>Player Name-</b>" + record.data.name + "<br><b>BEST-</b>" + battingInfo.BF;
+                        var myHtml = "<b>Player Name-</b>" + record.data.name + "<br><b>BEST-</b>" + battingInfo.BF+ "<br><b>Avg-</b>" + battingInfo.Avg+ "<br><b>SR-</b>" + battingInfo.SR;
                         personalInfo.setTitle(record.data.name);
                         personalInfo.setHtml(myHtml);
                     }

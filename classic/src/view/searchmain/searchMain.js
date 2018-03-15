@@ -3,14 +3,15 @@ Ext.define("iplinfo.view.searchmain.searchMain",
     extend:"Ext.panel.Panel",
     xtype:"searchmain",
     layout:"border",
-    height: 900,
-    width: 1100,    
+    height: 700,
+    width: 1100,        
     controller:"searchController",
 
     items: [ {
         xtype: "panel",        
         title: "Search Result",
         region: "center",
+        
         width:900,
 
         items: [{
@@ -24,6 +25,8 @@ Ext.define("iplinfo.view.searchmain.searchMain",
             handler: "searchHandler"
         }, {
             xtype: "panel",
+            layout:"fit",
+            height:500,
             name: "searchPanel",
         }]
     },{
